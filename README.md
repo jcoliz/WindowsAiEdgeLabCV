@@ -6,7 +6,7 @@ For this lab, we will use the Azure Custom Vision service to train a machine lea
 
 Here's a recap of the configuration you'll need before you get started with the lab.
 
-## Configure Azure Services
+## Azure Services
 
 We will need to set up a number of Azure services to complete this lab.
 
@@ -86,7 +86,7 @@ Your custom vision portal is all set!
 
 ## Azure Container Registry
 
-Refer to this guide: Quickstart: Create a private container registry using the Azure portal
+Refer to this guide: [Quickstart: Create a private container registry using the Azure portal](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-portal)
 
 1. Sign into the Azure Portal
 2. Create a new "Container Registry" resource
