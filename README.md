@@ -27,7 +27,7 @@ Container Registry Login Server	|
 Container Registry Username	|
 Container Registry Password	|
 IoTHub Name	|
-IoTHub Owner Key |
+IoTHub Owner Connection String |
 Edge Device Name |	
 Edge Device Connection String |
 
