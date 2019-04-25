@@ -18,15 +18,18 @@ We will need to set up a number of Azure services to complete this lab.
 
 You may be running this lab in an environment where the azure subscription and services have already been set up for you. In this case, you can skip the following sections and use the following information:
 
-Subscription Username	
-Subscription Password	
-Container Registry Login Server	
-Container Registry Username	
-Container Registry Password	
-IoTHub Name	
-IoTHub Owner Key	
-Edge Device Name	
-Edge Device Connection String	
+
+Item | Value
+--- | ---
+Subscription Username	| 
+Subscription Password	| 
+Container Registry Login Server	|
+Container Registry Username	|
+Container Registry Password	|
+IoTHub Name	|
+IoTHub Owner Key |
+Edge Device Name |	
+Edge Device Connection String |
 
 ## Development Environment
 
@@ -54,9 +57,11 @@ To recap, for this lab we are using:
 
 You may be running this lab in an environment where the target device has already been set up for you. In this case, you can skip the following sections and use the following information:
 
-Device Name
-Device IP
-Administrator Password	
+Item | Value
+--- | ---
+Device Name |
+Device IP |
+Administrator Password |
 
 ## Physical Environment
 
@@ -156,11 +161,11 @@ SUCCESS: Specified value was saved.
 
 ## Get the code
 
-If you are running this lab in an environment where this has already been set up, the initial sample will already be present in the directory C:\Source\AiEdgeLabBuild2019
+If you are running this lab in an environment where this has already been set up, the initial sample will already be present in the directory C:\WindowsAiEdgeLabCV. Otherwise, clone the code as follows:
 
-	1. Open a Windows Powershell Prompt.
-	2. Change to a directory you'll use for the lab code. For example, C:\
-	3. Clone the lab repo https://github.com/jcoliz/WindowsAiEdgeLabCV.git
+1. Open a Windows Powershell Prompt.
+2. Change to a directory you'll use for the lab code. For example, C:\
+3. Clone the lab repo https://github.com/jcoliz/WindowsAiEdgeLabCV.git
 
 ```
 PS C:\> git clone https://github.com/jcoliz/WindowsAiEdgeLabCV.git 
@@ -169,20 +174,6 @@ remote: Azure Repos
 remote: Found 78 objects to send. (51 ms)
 Unpacking objects: 100% (78/78), done.
 PS C:\> cd .\WindowsAiEdgeLabCV\
-PS C:\WindowsAiEdgeLabCV> ls
-
-    Directory: C:\WindowsAiEdgeLabCV
-
-Mode                LastWriteTime         Length Name
-----                -------------         ------ ----
--a----        4/24/2019   3:28 PM           2138 AppOptions.cs
--a----        4/24/2019   3:28 PM           1985 AsyncHelper.cs
--a----        4/24/2019   3:28 PM            464 BlockTimerHelper.cs
--a----        4/24/2019   3:28 PM           6992 Camera.cs
--a----        4/24/2019   3:28 PM           1833 DesktopObjects.cs
--a----        4/24/2019   3:28 PM           1588 DesktopObjects.csproj
--a----        4/24/2019   3:28 PM          34568 Labels.json
--a----        4/24/2019   3:28 PM           7560 Program.cs
 ```
 
 ## Get your model file
@@ -192,23 +183,19 @@ Copy the CustomVision.onnx model file from your downloads directory where you ex
 ## Build & Test the sample
 
 ```
-PS C:\WindowsAiEdgeLabCV> dotnet build
+PS C:\WindowsAiEdgeLabCV> dotnet publish
 Microsoft (R) Build Engine version 16.0.225-preview+g5ebeba52a1 for .NET Core
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-    Restore completed in 26.01 ms for C:\Source\Windows-Machine-Learning\DesktopObjects\DesktopObjects.csproj.
-C:\Program Files\dotnet\sdk\3.0.100-preview-009812\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.RuntimeIdentifierInference.targets(142,5): message NETSDK1057: You are using a preview version of .NET Core. See: https://aka.ms/dotnet-core-preview [C:\Source\Windows-Machine-Learning\DesktopObjects\DesktopObjects.csproj]
-    DesktopObjects -> C:\Source\Windows-Machine-Learning\DesktopObjects\bin\Debug\netcoreapp2.1\DesktopObjects.dll
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
+  Restore completed in 43.29 ms for C:\WindowsAiEdgeLabCV\WindowsAiEdgeLabCV.csproj.
+  WindowsAiEdgeLabCV -> C:\WindowsAiEdgeLabCV\bin\Debug\netcoreapp2.2\WindowsAiEdgeLabCV.dll
+  WindowsAiEdgeLabCV -> C:\WindowsAiEdgeLabCV\bin\Debug\netcoreapp2.2\publish\
 ```
 
 Run the sample to determine the name of the USB camera plugged in
 
 ```
-PS C:\Source\Windows-Machine-Learning\DesktopObjects> dotnet run  -l
+PS C:\WindowsAiEdgeLabCV> dotnet run --list
 Found 1 Cameras
 Microsoftr LifeCam HD-6000 for Notebooks
 ```
@@ -218,7 +205,7 @@ Point the camera at one of your objects, still connected to your development PC
 Run the sample locally to classify the object. This will test that the app is running correctly locally. For the 'device' parameter use a unique substring of the camera that came up. Here we can see that a "Mug" has been recognized.
 
 ```
-PS D:\home\source\Repos\Windows-iotcore-samples\Samples\EdgeModules\SqueezeNetObjectDetection\cs> dotnet run -- --model=CustomVision.onnx --device=LifeCam
+PS C:\WindowsAiEdgeLabCV> dotnet run -- --model=CustomVision.onnx --device=LifeCam
 4/24/2019 4:09:04 PM: Loading modelfile 'CustomVision.onnx' on the CPU...
 4/24/2019 4:09:04 PM: ...OK 594 ticks
 4/24/2019 4:09:05 PM: Running the model...
@@ -237,15 +224,15 @@ First, let’s connect to our device. Launch the IoT Core Dashboard from your de
 Now, notice the IP address for this device, for example "192.168.1.102". Back on our development PC, let's map the Q: drive so we can easily access files.
 
 ```
-PS D:\home\source\Repos\Windows-iotcore-samples\Samples\EdgeModules\SqueezeNetObjectDetection\cs> $ip="192.168.1.102"
-PS D:\home\source\Repos\Windows-iotcore-samples\Samples\EdgeModules\SqueezeNetObjectDetection\cs> net use q: \\$ip\c$ pw /USER:Administrator
+PS C:\WindowsAiEdgeLabCV> $ip="192.168.1.102"
+PS C:\WindowsAiEdgeLabCV> net use q: \\$ip\c$ pw /USER:Administrator
 The command completed successfully.
 ```
 
 ## Copy published files to target device
 
 ```
-PS D:\home\source\Repos\Windows-iotcore-samples\Samples\EdgeModules\SqueezeNetObjectDetection\cs> robocopy .\bin\Debug\netcoreapp2.2\win-x64\publish\ q:\data\modules\customvision
+PS C:\WindowsAiEdgeLabCV> robocopy .\bin\Debug\netcoreapp2.2\win-x64\publish\ q:\data\modules\customvision
 
 -------------------------------------------------------------------------------
     ROBOCOPY     ::     Robust File Copy for Windows
