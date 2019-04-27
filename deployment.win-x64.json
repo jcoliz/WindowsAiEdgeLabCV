@@ -36,7 +36,7 @@
                     }
                 },
                 "modules": {
-                    "squeezenet": {
+                    "customvision": {
                         "version": "1.0",
                         "type": "docker",
                         "status": "running",
@@ -53,7 +53,7 @@
             "properties.desired": {
                 "schemaVersion": "1.0",
                 "routes": {
-                    "sensorToSampleModule": "FROM /messages/modules/squeezenet/outputs/resultsOutput INTO $upstream"
+                    "sensorToSampleModule": "FROM /messages/modules/customvision/outputs/resultsOutput INTO $upstream"
                 },
                 "storeAndForwardConfiguration": {
                     "timeToLiveSecs": 7200
