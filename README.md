@@ -52,7 +52,7 @@ To recap, for this lab we are using:
 1. [UP Squared](https://www.aaeon.com/en/p/iot-gateway-maker-boards-up-squared)
 2. Running [Windows 10 IoT Core LTSC 2019](https://developer.microsoft.com/en-us/windows/iot)
 3. With a USB camera
-4. [Azure IoT Edge 1.0.6](https://docs.microsoft.com/en-us/azure/iot-edge/quickstart) or higher
+4. Azure IoT Edge 1.0.6 or higher
 5. Connected via Ethernet to a network switch on the same subnet as the Development PC.
 
 You may be running this lab in an environment where the target device has already been set up for you. In this case, you can skip the following sections and use the following information:
@@ -143,10 +143,14 @@ SUCCESS: Specified value was saved.
 
 ## Azure IoT Edge
 
-*** TODO: Finish this!
-
-After installing Azure IoT Edge, deploy the simulated temperature sensor to the device, and ensure that 
-you can connect to it using VS Code, and that you can see device-to-cloud (D2C) messages being transmitted.
+1. Install Azure IoT Edge. Follow this guide: [Install the Azure IoT Edge runtime on Windows](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-install-iot-edge-windows)
+2. After installing Azure IoT Edge, deploy the [Simulated Temperature Sensor](https://docs.microsoft.com/en-us/azure/iot-edge/quickstart). 
+1. In VS Code, open the "Azure IoT Hub Devices" pane. 
+2. Look for the Edge Device Name there. 
+3. Right-click on that device, then select "Start monitoring D2C message".
+6. Look for simulated temperature sensor results in the output window.
+7. Now open the [Time Series Insights explorer](https://insights.timeseries.azure.com/).
+8. *** TODO: More precise TSI explanation.
 
 # Step 1: Train the Model
 
@@ -445,3 +449,5 @@ Finally, beck on the development machine, we can monitor device to cloud (D2C) m
 Once you see this, you can be certain the inferencing is happening on the target device and flowing up to the Azure IoT Hub.
 
 # Step 5: View the results in Time Series Insights
+
+*** TODO: More precise TSI explanation.
