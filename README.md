@@ -1,6 +1,6 @@
 # Hands-On-Lab: AI+Edge on Windows with Azure Custom Vision
 
-For this lab, we will use the Azure Custom Vision service to train a machine learning model for image detection. We will use that model to create a .NET application to pull frames from a connected USB camera, use Windows ML to classify the image with GPU-accelerated inferencing, and send the result to Azure IoT Hub. We will deploy that application to a Windows IoT Core device using Azure IoT Edge. Finally, we will watch the results using Time Series Insights.
+For this lab, we will use the Azure Custom Vision service to train a machine learning model for image detection. We will use that model to create a .NET application to pull frames from a connected USB camera, use Windows ML to classify the image, then send the result to Azure IoT Hub. We will deploy that application to a Windows IoT Core device using Azure IoT Edge. Finally, we will watch the results using Time Series Insights.
 
 # Pre-requisites Overview
 
