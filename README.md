@@ -103,6 +103,7 @@ Refer to this guide: [Quickstart: Create a private container registry using the 
 5. Make note of the connection string for the iothubowner role. You'll need this later.
 6. Now, we will create a device. Switch to the "IoT Edge" pane.
 7. Choose "Add a new device"
+7. Make a note of the name you chose for this device. You'll need this later.
 8. Once created, select the device from the list.
 9. Make note of the connection string for this device. You'll need this later.
 
@@ -266,7 +267,9 @@ PS C:\WindowsAiEdgeLabCV> robocopy .\bin\Debug\netcoreapp2.2\win-x64\publish\ q:
 
 Following the same approach as above, we will run the app on the target device to ensure we have the correct camera there, and it's working on that device.
 
-Change to the "c:\data\modules\customvision" directory, then do a test run as we did previously:
+1. Connect the camera to the IoT Core device.
+2. Change to the "c:\data\modules\customvision" directory
+3. Do a test run as we did previously:
 
 ```
 [192.168.1.102]: PS C:\data\modules\customvision> .\WindowsAiEdgeLabCV.exe --list
@@ -385,7 +388,7 @@ The ACR_IMAGE must exactly match what you pushed, e.g. aiedgelabcr.azurecr.io/cu
 Refer to this guide: [Deploy Azure IoT Edge modules from Visual Studio Code](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-deploy-modules-vscode)
 
 1. In VS Code, open the "Azure IoT Hub Devices" pane. 
-2. Locate the device there named "ai-edge-lab-device". 
+2. Locate the device there named according to the edge device name from when you created it in the hub. 
 3. Right-click on that device, then select "Create deployment for single device".
 4. Choose the deployment.json file you edited in the step above.
 5. Press OK
@@ -431,7 +434,7 @@ Finally, beck on the development machine, we can monitor device to cloud (D2C) m
 6. Look for inferencing results in the output window.
 
 ```
-[IoTHubMonitor] [9:07:44 AM] Message received from [ai-edge-lab-device/squeezenet]:
+[IoTHubMonitor] [9:07:44 AM] Message received from [ai-edge-lab-device/customvision]:
 {
   "results": [
     {
