@@ -90,9 +90,11 @@ Refer to this guide: [Add an IoT hub event source to your Time Series Insights e
 
 1. Sign into the Azure Portal
 2. Create a new "Time Series Insights" resource.
-3. Choose the "PAYG" (pay-as-you-go) pricing tier.
+3. Choose the "S1" pricing tier.
 4. Choose "Next: Event Source"
 5. For the event source, choose the existing Azure IoT Hub you configured above. For IoT Hub access policy, choose "iothubowner". For "consumer group", enter a unique name to use as the consumer group for events.
+
+WARNING: The S1 pricing tier is $150/month. I recommend removing the time series insights from your account once you've run through the lab. The PAYG (pay-as-you-go) tier does not produce equivalent results in the Time Series Insights hub.
 
 ## Windows SDK
 
@@ -133,8 +135,8 @@ PS C:\WINDOWS\system32> net start WinRM
 The requested service has already been started.
 More help is available by typing NET HELPMSG 2182.
 
-PS C:\WINDOWS\system32> $ip="192.168.1.116"
-PS C:\WINDOWS\system32> Set-Item WSMan:\localhost\Client\TrustedHosts -Value $ip
+PS C:\WINDOWS\system32> $DeviceIPAddress="192.168.1.102"
+PS C:\WINDOWS\system32> Set-Item WSMan:\localhost\Client\TrustedHosts -Value $DeviceIPAddress
 ```
 
 ## Azure IoT Edge
@@ -145,8 +147,6 @@ PS C:\WINDOWS\system32> Set-Item WSMan:\localhost\Client\TrustedHosts -Value $ip
 2. Look for the Edge Device Name there. 
 3. Right-click on that device, then select "Start monitoring D2C message".
 6. Look for simulated temperature sensor results in the output window.
-7. Now open the [Time Series Insights explorer](https://insights.timeseries.azure.com/).
-8. *** TODO: More precise TSI explanation.
 
 Finally, you can speed up the lab by logging onto the device and pulling the iotcore container
 
@@ -156,6 +156,21 @@ Finally, you can speed up the lab by logging onto the device and pulling the iot
 Digest: sha256:d427e051efdef9bfe9600fc00bb877d33e422d2d27f1f204ebc36b22d6dc3a9a
 Status: Image is up to date for mcr.microsoft.com/windows/iotcore:1809
 ```
+
+## End-to-end setup verification
+
+It's wise to check that the simulated temperature sensor data is flowing through to Time Series Insights.
+
+1. Open the [Time Series Insights explorer](https://insights.timeseries.azure.com/) in a browser tab.
+2. Choose the environment name you chose when creating the Time Series Insights resource in the portal.
+3. Set "Quick Times" to "Last 30 minutes"
+4. Click the "Auto On/Off" button until it reads "Auto On"
+5. Press the search icon to update the data set
+5. Set the Interval Size to 4 seconds (lowest possible)
+6. In the "Events" section of the left panel, set "Measure" to "Count" of "Events", and "Split by" to "(None)"
+7. Press the "Refresh" button to refresh data
+
+This will show how many events are coming into Time Series Insights from the hub. This number should stay relatively consistent over time as more data comes in.
 
 ## Ready to go
 
@@ -488,7 +503,16 @@ Once you see this, you can be certain the inferencing is happening on the target
 
 # Step 5: View the results in Time Series Insights
 
-*** TODO: More precise TSI explanation.
-
 1. Open the [Time Series Insights explorer](https://insights.timeseries.azure.com/) in a browser tab.
-2. Turn on the "Preview" setting in the header. This is needed to attach to the "PAYG" Time Series Insights environment we set up earlier.
+2. Choose the environment name you chose when creating the Time Series Insights resource in the portal.
+3. Set "Quick Times" to "Last 30 minutes"
+4. Click the "Auto On/Off" button until it reads "Auto On"
+5. Press the search icon to update the data set
+5. Set the Interval Size to 4 seconds (lowest possible)
+6. In the "Events" section of the left panel, set "Measure" to "Count" of "Events", and "Split by" to "results.label"
+7. Press the "Refresh" button to refresh data
+
+Now you can change the object in front of the camera, and wait 10 seconds or so for the data to propagate, then press "Refresh" again. 
+You'll see the graph change to indicate more of the new object at the current time.
+
+![Time Series Insights Explorer](assets/tsi.jpg)
