@@ -119,6 +119,24 @@ SUCCESS: Specified value was saved.
 8. Enter the connection string for the IoT Hub Owner, from the steps above
 9. You'll see the device show up which you created in the previous steps
 
+## Windows IoT Core device
+
+After setting up Windows IoT Core on the target device, we'll need to configure it to allow Power Shell connections.
+
+Refer to this guide: [Using PowerShell for Windows IoT](https://docs.microsoft.com/en-us/windows/iot-core/connect-your-device/powershell)
+
+1. Open an Administrator PowerShell window on the development PC
+2. Replace the IP address in the example below with the 
+
+```
+PS C:\WINDOWS\system32> net start WinRM
+The requested service has already been started.
+More help is available by typing NET HELPMSG 2182.
+
+PS C:\WINDOWS\system32> $ip="192.168.1.116"
+PS C:\WINDOWS\system32> Set-Item WSMan:\localhost\Client\TrustedHosts -Value $ip
+```
+
 ## Azure IoT Edge
 
 1. Install Azure IoT Edge. Follow this guide: [Install the Azure IoT Edge runtime on Windows](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-install-iot-edge-windows)
@@ -152,7 +170,7 @@ IoT Hub Owner Connection String |
 IoT Edge Device Name |	
 IoT Edge Device Connection String |
 Device Name |
-Device IP |
+Device IP Address |
 Device Administrator Password |
 
 # Step 1: Train the Model
@@ -229,18 +247,24 @@ PS C:\WindowsAiEdgeLabCV> dotnet run --model=CustomVision.onnx --device=LifeCam
 
 # Step 3: Build and push a moby container
 
-## Find our IoT Core device
+## Connect to our IoT Core device
 
 IoT Core container images must be built on an IoT Core device. 
 
-First, let’s connect to our device. Launch the IoT Core Dashboard from your development PC, and identify the IoT Core device you're using. Right-click, and choose "Launch Powershell". Enter the password for your device, and wait for a shell to come up. We'll come back to that in a moment.
+We will need a way to copy files to our device, and a powershell window from our development PC connected to that device.
 
-Now, notice the IP address for this device, for example "192.168.1.102". Back on our development PC, let's map the Q: drive so we can easily access files.
+First, we will map the Q: drive to our device so we can access files. You'll need the Device IP Address, as well as the Device Administrator Password.
 
 ```
 PS C:\WindowsAiEdgeLabCV> $ip="192.168.1.102"
 PS C:\WindowsAiEdgeLabCV> net use q: \\$ip\c$ pw /USER:Administrator
 The command completed successfully.
+```
+
+Second, we'll connect a power shell session. Open a new power shell window, and connect to the device. When prompted enter the Device Administrator Password.
+
+```
+PS C:\WindowsAiEdgeLabCV> Enter-PSSession -ComputerName $ip -Credential ~\Administrator
 ```
 
 ## Copy published files to target device
@@ -456,3 +480,6 @@ Once you see this, you can be certain the inferencing is happening on the target
 # Step 5: View the results in Time Series Insights
 
 *** TODO: More precise TSI explanation.
+
+1. Open the [Time Series Insights explorer](https://insights.timeseries.azure.com/) in a browser tab.
+2. Turn on the "Preview" setting in the header. This is needed to attach to the "PAYG" Time Series Insights environment we set up earlier.
