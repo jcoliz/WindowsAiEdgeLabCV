@@ -15,7 +15,9 @@ This can be done days before the lab.
 
 1. Set up the Development PC as described in the main README.
 3. Create a directory on the desktop entitled "Windows IoT Edge Lab"
-2. Place a READ ONLY document in that directory containing the README instructions, with the setup bits removed, and with the configuration information added in.
+2. Place a READ ONLY document in that directory containing the README instructions.
+2. Remove the "Setup" steps, including the "day of" setup from below. You'll be doing those, so the lab user doesn't need to.
+3. Add the Azure resources configuration information to the top of the document.
 3. Place a web shortcut to [Custom Vision Portal](https://www.customvision.ai/) 
 3. Place a web shortcut to[Time Series Insights explorer](https://insights.timeseries.azure.com/) in another browser tab, also logged in
 4. Place an app shortcut to VS Code
@@ -47,6 +49,8 @@ Just before the lab begins, do the following:
 7. Open a powershell window to C:\WindowsAiEdgeLabCV
 8. Open a powershell window and connect to the IoT Core device
 8. Check 'iotedge list' to ensure all modules are up including simulated temp sensor
+8. Docker login to the container registry using those credentials
+8. Set the $Container variable to match their Container Registry Login Server
 9. Map the Q: drive on the development PC to the IoT Core device
 2. Open a browser
 3. Open the [Custom Vision Portal](https://www.customvision.ai/)
