@@ -41,6 +41,13 @@ namespace EdgeModuleSamples.Common
                 Console.WriteLine(DateTime.Now.ToLocalTime() + ": " + message);
             }
         }
+        public static void WriteLineException(Exception ex, bool writestack = true)
+        {
+            WriteLineInternal(DateTime.Now.ToLocalTime() + ": [ERROR] " + fmt_output_error + "{0} {1}" + fmt_output_default, ex.GetType().Name, ex.Message);
+
+            if (writestack)
+                WriteLineInternal(ex.StackTrace);
+        }
         public static void WriteLineVerbose(string fmt, params object[] args)
         {
             if (Verbose)

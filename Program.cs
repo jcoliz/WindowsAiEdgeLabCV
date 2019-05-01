@@ -146,7 +146,7 @@ namespace SampleModule
             }
             catch (Exception ex)
             {
-                Log.WriteLineError($"{ex.GetType().Name} {ex.Message}");
+                Log.WriteLineException(ex);
                 return -1;
             }
         }
