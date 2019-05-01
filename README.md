@@ -127,15 +127,15 @@ After setting up Windows IoT Core on the target device, we'll need to configure 
 
 Refer to this guide: [Using PowerShell for Windows IoT](https://docs.microsoft.com/en-us/windows/iot-core/connect-your-device/powershell)
 
-1. Open an Administrator PowerShell window on the development PC
-2. Replace the IP address in the example below with the 
+1. Open an Windows PowerShell (Admin) window on the development PC
+2. Replace the IP address in the example below with the correct IP address for the machine you're targeting
 
 ```
 PS C:\WINDOWS\system32> net start WinRM
 The requested service has already been started.
 More help is available by typing NET HELPMSG 2182.
 
-PS C:\WINDOWS\system32> $DeviceIPAddress="192.168.1.102"
+PS C:\WINDOWS\system32> $DeviceIPAddress = "192.168.1.102"
 PS C:\WINDOWS\system32> Set-Item WSMan:\localhost\Client\TrustedHosts -Value $DeviceIPAddress
 ```
 
@@ -178,7 +178,7 @@ When starting the lab, you should have these things open on your development mac
 
 1. These instructions
 2. VS Code open to the C:\WindowsAiEdgeLabCV folder
-3. [Custom Vision Portal](https://www.customvision.ai/) open in a browser tab, and logged in with your Azure Subscription
+3. [Custom Vision Portal](https://www.customvision.ai/) open in a browser tab, and logged in with your Azure Subscription. Select the Directory associated with your Azure custom vision resource. 
 3. [Time Series Insights explorer](https://insights.timeseries.azure.com/) in another browser tab, also logged in
 4. The following service and device information:
 
@@ -248,7 +248,7 @@ Copyright (C) Microsoft Corporation. All rights reserved.
   WindowsAiEdgeLabCV -> C:\WindowsAiEdgeLabCV\bin\Debug\netcoreapp2.2\publish\
 ```
 
-Run the sample to determine the name of the USB camera plugged in
+Run the sample to determine the name of the USB camera plugged in.
 
 ```
 PS C:\WindowsAiEdgeLabCV> dotnet run --list
@@ -256,7 +256,7 @@ Found 1 Cameras
 Microsoftr LifeCam HD-6000 for Notebooks
 ```
 
-Point the camera at one of your objects, still connected to your development PC
+Point the camera at one of your objects, still connected to your development PC.
 
 Run the sample locally to classify the object. This will test that the app is running correctly locally. For the 'device' parameter use a unique substring of the camera that came up. Here we can see that a "Mug" has been recognized.
 
@@ -275,20 +275,20 @@ PS C:\WindowsAiEdgeLabCV> dotnet run --model=CustomVision.onnx --device=LifeCam
 
 IoT Core container images must be built on an IoT Core device. 
 
-We will need a way to copy files to our device, and a powershell window from our development PC connected to that device.
+We will need a way to copy files to our device, and a Windows PowerShell window from our development PC connected to that device.
 
 First, we will map the Q: drive to our device so we can access files. You'll need the Device IP Address, as well as the Device Administrator Password.
 
 ```
-PS C:\WindowsAiEdgeLabCV> $DeviceIPAddress="192.168.1.102"
-PS C:\WindowsAiEdgeLabCV> net use q: \\$DeviceIPAddress\c$ pw /USER:Administrator
+PS C:\WindowsAiEdgeLabCV> $DeviceIPAddress = "192.168.1.102"
+PS C:\WindowsAiEdgeLabCV> net use q: \\$DeviceIPAddress\c$ $DeviceAdministratorPassword /USER:Administrator
 The command completed successfully.
 ```
 
-Second, we'll connect a power shell session. Open a new power shell window, and connect to the device. When prompted enter the Device Administrator Password.
+Second, we'll connect a Windows PowerShell session to our target device. Open a new Windows PowerShell window, and connect to the device. When prompted enter the Device Administrator Password.
 
 ```
-PS C:\WindowsAiEdgeLabCV> Enter-PSSession -ComputerName $ip -Credential ~\Administrator
+PS C:\WindowsAiEdgeLabCV> Enter-PSSession -ComputerName $DeviceIPAddress -Credential ~\Administrator
 ```
 
 ## Copy published files to target device
@@ -318,13 +318,17 @@ PS C:\WindowsAiEdgeLabCV> robocopy .\bin\Debug\netcoreapp2.2\win-x64\publish\ q:
 Following the same approach as above, we will run the app on the target device to ensure we have the correct camera there, and it's working on that device.
 
 1. Connect the camera to the IoT Core device.
+1. In the Windows PowerShell window to the IoT Core device...
 2. Change to the "c:\data\modules\customvision" directory
 3. Do a test run as we did previously:
 
 ```
+[192.168.1.102]: PS C:\Data\Users\Administrator\Documents> cd c:\data\modules\customvision
+
 [192.168.1.102]: PS C:\data\modules\customvision> .\WindowsAiEdgeLabCV.exe --list
 4/27/2019 8:30:52 AM: Available cameras:
 4/27/2019 8:30:53 AM: Microsoft® LifeCam HD-6000 for Notebooks
+
 [192.168.1.102]: PS C:\data\modules\customvision> .\WindowsAiEdgeLabCV.exe --model=CustomVision.onnx --device=LifeCam
 4/27/2019 8:31:31 AM: Loading modelfile 'CustomVision.onnx' on the CPU...
 4/27/2019 8:31:32 AM: ...OK 1516 ticks
