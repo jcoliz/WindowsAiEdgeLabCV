@@ -53,6 +53,7 @@
   <Target Name="CopyCustomContentOnPublish" AfterTargets="Publish">
     <Copy SourceFiles="CustomVision.onnx" DestinationFolder="$(PublishDir)" />
     <Copy SourceFiles="Dockerfile" DestinationFolder="$(PublishDir)" />
+    <Copy SourceFiles="Dockerfile.enterprise" DestinationFolder="$(PublishDir)" />
   </Target>
 
 </Project>
