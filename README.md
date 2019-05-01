@@ -16,21 +16,6 @@ We will need to set up a number of Azure services to complete this lab.
 4. Azure IoT Hub, with a single device set up for Edge
 5. Azure Time Series Insights, tied to the above Azure IoT Hub.
 
-You may be running this lab in an environment where the azure subscription and services have already been set up for you. In this case, you can skip the following sections and use the following information:
-
-
-Item | Value
---- | ---
-Subscription Username	| 
-Subscription Password	| 
-Container Registry Login Server	|
-Container Registry Username	|
-Container Registry Password	|
-IoTHub Name	|
-IoTHub Owner Connection String |
-Edge Device Name |	
-Edge Device Connection String |
-
 ## Development Environment
 
 To set up our development environment, we will need:
@@ -54,14 +39,6 @@ To recap, for this lab we are using:
 3. With a USB camera
 4. Azure IoT Edge 1.0.6 or higher
 5. Connected via Ethernet to a network switch on the same subnet as the Development PC.
-
-You may be running this lab in an environment where the target device has already been set up for you. In this case, you can skip the following sections and use the following information:
-
-Item | Value
---- | ---
-Device Name |
-Device IP |
-Administrator Password |
 
 ## Physical Environment
 
@@ -153,11 +130,36 @@ SUCCESS: Specified value was saved.
 7. Now open the [Time Series Insights explorer](https://insights.timeseries.azure.com/).
 8. *** TODO: More precise TSI explanation.
 
+## Ready to go
+
+When starting the lab, you should have these things open on your development machine:
+
+1. These instructions
+2. VS Code open to the C:\WindowsAiEdgeLabCV folder
+3. [Custom Vision Portal](https://www.customvision.ai/) open in a browser tab, and logged in with your Azure Subscription
+3. [Time Series Insights explorer](https://insights.timeseries.azure.com/) in another browser tab, also logged in
+4. The following service and device information:
+
+Item | Value
+--- | ---
+Azure Subscription Username	| 
+Azure Subscription Password	| 
+Container Registry Login Server	|
+Container Registry Username	|
+Container Registry Password	|
+IoT Hub Name	|
+IoT Hub Owner Connection String |
+IoT Edge Device Name |	
+IoT Edge Device Connection String |
+Device Name |
+Device IP |
+Device Administrator Password |
+
 # Step 1: Train the Model
 
 1. Plug the USB camera into your development PC.
 2. Using the Camera app on your development PC, take at least 5 pictures each of your objects. Store these pictures on your computer. Organize all the photos for each object into a folder named for this object. It will make them easier to upload.
-3. Log into the Custom Vision Portal
+3. Log into the [Custom Vision Portal](https://www.customvision.ai/)
 4. Choose the Directory associated with your Azure account
 5. Create a New Project. Be sure to choose a "compact" domain.
 6. Upload them to your custom vision project. I recommend to upload one object at a time, so it's easy to apply a tag to all your images. Each time you upload all the images for a given object, specify the tag at that time.
