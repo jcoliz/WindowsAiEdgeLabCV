@@ -148,15 +148,6 @@ PS C:\WINDOWS\system32> Set-Item WSMan:\localhost\Client\TrustedHosts -Value $De
 3. Right-click on that device, then select "Start monitoring D2C message".
 6. Look for simulated temperature sensor results in the output window.
 
-Finally, you can speed up the lab by logging onto the device and pulling the iotcore container
-
-```
-[192.168.1.116]: PS C:\data\modules\customvision> docker pull mcr.microsoft.com/windows/iotcore:1809
-1809: Pulling from windows/iotcore
-Digest: sha256:d427e051efdef9bfe9600fc00bb877d33e422d2d27f1f204ebc36b22d6dc3a9a
-Status: Image is up to date for mcr.microsoft.com/windows/iotcore:1809
-```
-
 ## End-to-end setup verification
 
 It's wise to check that the simulated temperature sensor data is flowing through to Time Series Insights.
