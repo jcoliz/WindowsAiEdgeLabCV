@@ -148,6 +148,15 @@ PS C:\WINDOWS\system32> Set-Item WSMan:\localhost\Client\TrustedHosts -Value $ip
 7. Now open the [Time Series Insights explorer](https://insights.timeseries.azure.com/).
 8. *** TODO: More precise TSI explanation.
 
+Finally, you can speed up the lab by logging onto the device and pulling the iotcore container
+
+```
+[192.168.1.116]: PS C:\data\modules\customvision> docker pull mcr.microsoft.com/windows/iotcore:1809
+1809: Pulling from windows/iotcore
+Digest: sha256:d427e051efdef9bfe9600fc00bb877d33e422d2d27f1f204ebc36b22d6dc3a9a
+Status: Image is up to date for mcr.microsoft.com/windows/iotcore:1809
+```
+
 ## Ready to go
 
 When starting the lab, you should have these things open on your development machine:
@@ -256,8 +265,8 @@ We will need a way to copy files to our device, and a powershell window from our
 First, we will map the Q: drive to our device so we can access files. You'll need the Device IP Address, as well as the Device Administrator Password.
 
 ```
-PS C:\WindowsAiEdgeLabCV> $ip="192.168.1.102"
-PS C:\WindowsAiEdgeLabCV> net use q: \\$ip\c$ pw /USER:Administrator
+PS C:\WindowsAiEdgeLabCV> $DeviceIPAddress="192.168.1.102"
+PS C:\WindowsAiEdgeLabCV> net use q: \\$DeviceIPAddress\c$ pw /USER:Administrator
 The command completed successfully.
 ```
 
@@ -350,7 +359,7 @@ Now that we are sure the app is working correctly within the container, we will 
 Before that, we will need to login to the container registry using the Container Registry Username and Container Registry Password obtained in previous steps.
 
 ```
-[192.168.1.102]: PS C:\data\modules\customvision> docker login aiedgelabcr.azurecr.io -u aiedgelabcr -p {ACR_PASS}
+PS C:\WindowsAiEdgeLabCV> docker login $ContainerRegistryLoginServer -u $ContainerRegistryUsername -p $ContainerRegistryPassword
 Login Succeeded
 ```
 
