@@ -203,7 +203,7 @@ Device Administrator Password |
 1. Upload them to your custom vision project. I recommend to upload one object at a time, so it's easy to apply a tag to all your images. Each time you upload all the images for a given object, specify the tag at that time.
 1. Select "Train" to train the model
 1. Select "Quick Test" to test the model.
-1. Using the camera app on your PC, take one more picture of one of the objects
+. Using the camera app on your PC, take one more picture of one of the objects
 1. Upload the picture you took, verify that it was predicted correctly.
 1. Export the model. From the "Performance" tab, select the "Export" command.
 1. Choose "ONNX", then "ONNX1.2" version.
@@ -265,13 +265,13 @@ PS C:\WindowsAiEdgeLabCV> dotnet run --model=CustomVision.onnx --device=LifeCam
 4/24/2019 4:09:05 PM: Recognized {"results":[{"label":"Mug","confidence":1.0}],"metrics":{"evaltimeinms":47,"cycletimeinms":0}}
 ```
 
-# Step 3: Build and push a moby container
+# Step 3: Build and push a container
 
 ## Connect to our IoT Core device
 
 IoT Core container images must be built on an IoT Core device. 
 
-We will need a way to copy files to our device, and a Windows PowerShell window from our development PC connected to that device.
+We will need a way to copy files to our device and a Windows PowerShell window from our development PC connected to that device.
 
 First, we will map the Q: drive to our device so we can access files. You'll need the Device IP Address, as well as the Device Administrator Password.
 
@@ -315,11 +315,11 @@ Following the same approach as above, we will run the app on the target device t
 
 1. Connect the camera to the IoT Core device.
 1. In the Windows PowerShell window to the IoT Core device...
-1. Change to the "c:\data\modules\customvision" directory
+1. Change to the "C:\data\modules\customvision" directory
 1. Do a test run as we did previously:
 
 ```
-[192.168.1.102]: PS C:\Data\Users\Administrator\Documents> cd c:\data\modules\customvision
+[192.168.1.102]: PS C:\Data\Users\Administrator\Documents> cd C:\data\modules\customvision
 
 [192.168.1.102]: PS C:\data\modules\customvision> .\WindowsAiEdgeLabCV.exe --list
 4/27/2019 8:30:52 AM: Available cameras:
@@ -342,7 +342,7 @@ to test the lab, so I will do as follows:
 [192.168.1.102]: PS C:\data\modules\customvision> $Container = "aiedgelabcr.azurecr.io/customvision:1.0-x64-iotcore"
 ```
 
-Still in the "c:\data\modules\customvision" directory, we will now build the container on the IoT Core device.
+Still in the "C:\data\modules\customvision" directory, we will now build the container on the IoT Core device.
 Note that if we were building for an IoT Enterprise device, we could just do this on our development machine.
 
 ```
