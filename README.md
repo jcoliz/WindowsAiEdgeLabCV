@@ -35,7 +35,7 @@ In this lab, we are using an UP Squared board running IoT Core using CPU evaluat
 
 To recap, for this lab we are using:
 
-1. [UP Squared](https://www.aaeon.com/en/p/iot-gateway-maker-boards-up-squared)
+1. [UP Squared](https://docs.microsoft.com/en-us/windows/iot-core/tutorials/quickstarter/prototypeboards)
 2. Running [Windows 10 IoT Core LTSC 2019](https://developer.microsoft.com/en-us/windows/iot)
 3. With a USB camera
 4. [Azure IoT Edge 1.0.6](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-install-iot-edge-windows) or higher
@@ -150,6 +150,7 @@ PS C:\WINDOWS\system32> Set-Item WSMan:\localhost\Client\TrustedHosts -Value $De
 1. After installing Azure IoT Edge, deploy the [Simulated Temperature Sensor](https://docs.microsoft.com/en-us/azure/iot-edge/quickstart). 
 1. In VS Code, open the "Azure IoT Hub Devices" pane. 
 1. Look for the Edge Device Name there. 
+1. Expand "Modules". Notice three modules there, all green and connected.
 1. Right-click on that device, then select "Start monitoring D2C message".
 1. Look for simulated temperature sensor results in the output window.
 
@@ -173,7 +174,7 @@ This will show how many events are coming into Time Series Insights from the hub
 When starting the lab, you should have these things open on your development machine:
 
 1. These instructions
-1. VS Code open to the C:\WindowsAiEdgeLabCV folder
+1. VS Code open
 1. [Custom Vision Portal](https://www.customvision.ai/) open in a browser tab, and logged in with your Azure Subscription. Select the Directory associated with your Azure custom vision resource. 
 1. [Time Series Insights explorer](https://insights.timeseries.azure.com/) in another browser tab, also logged in
 1. The following service and device information:
