@@ -35,7 +35,7 @@ In this lab, we are using an UP Squared board running IoT Core using CPU evaluat
 
 To recap, for this lab we are using:
 
-1. [UP Squared](https://docs.microsoft.com/en-us/windows/iot-core/tutorials/quickstarter/prototypeboards)
+1. [AAEON UP Squared](https://docs.microsoft.com/en-us/windows/iot-core/tutorials/quickstarter/prototypeboards) board
 2. Running [Windows 10 IoT Core LTSC 2019](https://developer.microsoft.com/en-us/windows/iot)
 3. With a USB camera
 4. [Azure IoT Edge 1.0.6](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-install-iot-edge-windows) or higher
