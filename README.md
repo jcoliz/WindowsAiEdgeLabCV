@@ -58,7 +58,7 @@ Refer to this guide: [How to build a classifier with Custom Vision](https://docs
 1. Sign into the Azure Portal
 1. Create a new "Custom Vision" resource.
 1. Sign into the [Custom Vision Portal](https://www.customvision.ai/) with the same account as your azure subscription
-1. From the profile menu (upper-left) choose the "directory" associated with your azure subscription.
+1. From the profile menu (upper-right) choose the "directory" associated with your azure subscription.
 
 Your custom vision portal is all set!
 
@@ -476,7 +476,7 @@ Once the modules are up, you can inspect that the "customvision" module is opera
 4/27/2019 9:06:27 AM: Recognized {"results":[{"label":"Mug","confidence":1.0}],"metrics":{"evaltimeinms":1500,"cycletimeinms":0}}
 ```
 
-Finally, beck on the development machine, we can monitor device to cloud (D2C) messages from VS Code to ensure the messages are going up.
+Finally, back on the development machine, we can monitor device to cloud (D2C) messages from VS Code to ensure the messages are going up.
 
 1. In VS Code, open the "Azure IoT Hub Devices" pane. 
 1. Locate the device there named "ai-edge-lab-device". 
