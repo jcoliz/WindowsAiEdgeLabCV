@@ -1,0 +1,1110 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  <link rel="dns-prefetch" href="https://github.githubassets.com">
+  <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars2.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com">
+  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
+
+
+
+  <link crossorigin="anonymous" media="all" integrity="sha512-3+HOqCwtQal5hOJQ+mdxiq5zmGOTjF6RhjDsPLxbKDYgGlLFeCwzoIanb7j5IiCuXKUqyC2q8FdkC4nmx2P2rA==" rel="stylesheet" href="https://github.githubassets.com/assets/frameworks-a2fba223d5af91496cac70d4ec3624df.css" />
+  
+    <link crossorigin="anonymous" media="all" integrity="sha512-K1ZDcMAScrII4AIfkC9/MFPu46xORn2/Da/1QlFn28ti4WRM7VyDJsU8A+1HFS1EGl7djTNxgwr3eullJpwm9Q==" rel="stylesheet" href="https://github.githubassets.com/assets/github-391e36018f842d7a4844c9492593e63c.css" />
+    
+    
+    
+    
+
+  <meta name="viewport" content="width=device-width">
+  
+  <title>WindowsAiEdgeLabCV/winmliot.drawio at master · awaregroup/WindowsAiEdgeLabCV</title>
+    <meta name="description" content="Hands-on-Lab for AI+Edge on Windows. Originally given at Build 2019 - awaregroup/WindowsAiEdgeLabCV">
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+  <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+  <meta property="fb:app_id" content="1401488693436528">
+
+    <meta name="twitter:image:src" content="https://avatars2.githubusercontent.com/u/25564124?s=400&amp;v=4" /><meta name="twitter:site" content="@github" /><meta name="twitter:card" content="summary" /><meta name="twitter:title" content="awaregroup/WindowsAiEdgeLabCV" /><meta name="twitter:description" content="Hands-on-Lab for AI+Edge on Windows. Originally given at Build 2019 - awaregroup/WindowsAiEdgeLabCV" />
+    <meta property="og:image" content="https://avatars2.githubusercontent.com/u/25564124?s=400&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="awaregroup/WindowsAiEdgeLabCV" /><meta property="og:url" content="https://github.com/awaregroup/WindowsAiEdgeLabCV" /><meta property="og:description" content="Hands-on-Lab for AI+Edge on Windows. Originally given at Build 2019 - awaregroup/WindowsAiEdgeLabCV" />
+
+  <link rel="assets" href="https://github.githubassets.com/">
+  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6Mzk5NDU4NDcxOjQyOWY1MjBhMjA0NjlmZTU5NTdiMDBmYmI4YTA0N2I5OGE3Njk5NzQxNzgyOWIyZTlkNWMwNTU4OTMxMDhmZTI=--bb6ce875b31cfe8c94b9708e613aed7e1d052c4a">
+  <meta name="pjax-timeout" content="1000">
+  <link rel="sudo-modal" href="/sessions/sudo_modal">
+  <meta name="request-id" content="DB5F:9E32:2A3A2CD:417737D:5CD3171C" data-pjax-transient>
+
+
+  
+
+  <meta name="selected-link" value="repo_source" data-pjax-transient>
+
+      <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+    <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
+
+  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="DB5F:9E32:2A3A2CD:417737D:5CD3171C" /><meta name="octolytics-dimension-region_edge" content="sea" /><meta name="octolytics-dimension-region_render" content="iad" /><meta name="octolytics-actor-id" content="6231610" /><meta name="octolytics-actor-login" content="jcoliz" /><meta name="octolytics-actor-hash" content="7439c87ef29597710ca1c267b6d800b32eed1a36161d91bbceacb70a090f2dc7" />
+<meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" />
+
+
+
+    <meta name="google-analytics" content="UA-3769691-2">
+
+  <meta class="js-ga-set" name="userId" content="ce8d86ca5a7c4a9d54aab781d30f038c">
+
+<meta class="js-ga-set" name="dimension1" content="Logged In">
+
+
+
+  
+
+      <meta name="hostname" content="github.com">
+    <meta name="user-login" content="jcoliz">
+
+      <meta name="expected-hostname" content="github.com">
+    <meta name="js-proxy-site-detection-payload" content="OTBkODg5ZTIyNmU2ODkyZDY4OTc3ZTNmNTQ2NWRmNGZiZjg1ZjcwOGFmMTdkNmVmZGJhZTc5NjAxMzQ3YTA2NHx7InJlbW90ZV9hZGRyZXNzIjoiMjQuNzUuMjM1LjE2MSIsInJlcXVlc3RfaWQiOiJEQjVGOjlFMzI6MkEzQTJDRDo0MTc3MzdEOjVDRDMxNzFDIiwidGltZXN0YW1wIjoxNTU3MzM3ODkzLCJob3N0IjoiZ2l0aHViLmNvbSJ9">
+
+    <meta name="enabled-features" content="UNIVERSE_BANNER,MARKETPLACE_INVOICED_BILLING,MARKETPLACE_SOCIAL_PROOF_CUSTOMERS,MARKETPLACE_TRENDING_SOCIAL_PROOF,MARKETPLACE_RECOMMENDATIONS,NOTIFY_ON_BLOCK,RELATED_ISSUES">
+
+  <meta name="html-safe-nonce" content="8ada0ba7a85350c5bb9a8dc38ff909144ae6fae0">
+
+  <meta http-equiv="x-pjax-version" content="6785b8d027773984171ae33e3c61cf87">
+  
+
+      <link href="https://github.com/awaregroup/WindowsAiEdgeLabCV/commits/master.atom" rel="alternate" title="Recent Commits to WindowsAiEdgeLabCV:master" type="application/atom+xml">
+
+  <meta name="go-import" content="github.com/awaregroup/WindowsAiEdgeLabCV git https://github.com/awaregroup/WindowsAiEdgeLabCV.git">
+
+  <meta name="octolytics-dimension-user_id" content="25564124" /><meta name="octolytics-dimension-user_login" content="awaregroup" /><meta name="octolytics-dimension-repository_id" content="185132931" /><meta name="octolytics-dimension-repository_nwo" content="awaregroup/WindowsAiEdgeLabCV" /><meta name="octolytics-dimension-repository_public" content="true" /><meta name="octolytics-dimension-repository_is_fork" content="true" /><meta name="octolytics-dimension-repository_parent_id" content="183323569" /><meta name="octolytics-dimension-repository_parent_nwo" content="jcoliz/WindowsAiEdgeLabCV" /><meta name="octolytics-dimension-repository_network_root_id" content="183323569" /><meta name="octolytics-dimension-repository_network_root_nwo" content="jcoliz/WindowsAiEdgeLabCV" /><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="false" />
+
+
+    <link rel="canonical" href="https://github.com/awaregroup/WindowsAiEdgeLabCV/blob/master/assets/winmliot.drawio" data-pjax-transient>
+
+
+  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+
+  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+
+  <link rel="mask-icon" href="https://github.githubassets.com/pinned-octocat.svg" color="#000000">
+  <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://github.githubassets.com/favicon.ico">
+
+<meta name="theme-color" content="#1e2327">
+
+
+
+
+
+  <link rel="manifest" href="/manifest.json" crossOrigin="use-credentials">
+
+  </head>
+
+  <body class="logged-in env-production page-responsive min-width-0 page-blob">
+    
+
+  <div class="position-relative js-header-wrapper ">
+    <a href="#start-of-content" tabindex="1" class="p-3 bg-blue text-white show-on-focus js-skip-to-content">Skip to content</a>
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
+
+    
+    
+    
+
+
+          <header class="Header js-details-container Details flex-wrap flex-lg-nowrap p-responsive" role="banner">
+
+    <div class="Header-item d-none d-lg-flex">
+      <a class="Header-link" href="https://github.com/" data-hotkey="g d" aria-label="Homepage" data-ga-click="Header, go to dashboard, icon:logo">
+  <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+</a>
+
+    </div>
+
+    <div class="Header-item d-lg-none">
+      <button class="Header-link btn-link js-details-target" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <svg height="24" class="octicon octicon-three-bars" viewBox="0 0 12 16" version="1.1" width="18" aria-hidden="true"><path fill-rule="evenodd" d="M11.41 9H.59C0 9 0 8.59 0 8c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zm0-4H.59C0 5 0 4.59 0 4c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zM.59 11H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1H.59C0 13 0 12.59 0 12c0-.59 0-1 .59-1z"/></svg>
+      </button>
+    </div>
+
+    <div class="Header-item Header-item--full flex-column flex-lg-row width-full flex-order-2 flex-lg-order-none mr-0 mr-lg-3 mt-3 mt-lg-0 Details-content--hidden">
+        <div class="header-search flex-self-stretch flex-lg-self-auto mr-0 mr-lg-3 mb-3 mb-lg-0 scoped-search site-scoped-search js-site-search position-relative js-jump-to"
+  role="combobox"
+  aria-owns="jump-to-results"
+  aria-label="Search or jump to"
+  aria-haspopup="listbox"
+  aria-expanded="false"
+>
+  <div class="position-relative">
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-site-search-form" role="search" aria-label="Site" data-scope-type="Repository" data-scope-id="185132931" data-scoped-search-url="/awaregroup/WindowsAiEdgeLabCV/search" data-unscoped-search-url="/search" action="/awaregroup/WindowsAiEdgeLabCV/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+      <label class="form-control input-sm header-search-wrapper p-0 header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center js-chromeless-input-container">
+        <input type="text"
+          class="form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+          data-hotkey="s,/"
+          name="q"
+          value=""
+          placeholder="Search or jump to…"
+          data-unscoped-placeholder="Search or jump to…"
+          data-scoped-placeholder="Search or jump to…"
+          autocapitalize="off"
+          aria-autocomplete="list"
+          aria-controls="jump-to-results"
+          aria-label="Search or jump to…"
+          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=unBajOSZiQOg3UWaxz83PcLIP0vBU3k5SYO4+ofqYIZXfzm3xOqXafkgpqHJq6V5GZG2yibGwCLe5kivl73xbA=="
+          spellcheck="false"
+          autocomplete="off"
+          >
+          <input type="hidden" class="js-site-search-type-field" name="type" >
+            <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash">
+
+            <div class="Box position-absolute overflow-hidden d-none jump-to-suggestions js-jump-to-suggestions-container">
+              
+<ul class="d-none js-jump-to-suggestions-template-container">
+  
+
+<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-suggestion" role="option">
+  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="">
+    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
+      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"/></svg>
+    </div>
+
+    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="" width="28" height="28">
+
+    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+    </div>
+
+    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
+        In this repository
+      </span>
+      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
+        All GitHub
+      </span>
+      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+
+    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
+      Jump to
+      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+  </a>
+</li>
+
+</ul>
+
+<ul class="d-none js-jump-to-no-results-template-container">
+  <li class="d-flex flex-justify-center flex-items-center f5 d-none js-jump-to-suggestion p-2">
+    <span class="text-gray">No suggested jump to results</span>
+  </li>
+</ul>
+
+<ul id="jump-to-results" role="listbox" class="p-0 m-0 js-navigation-container jump-to-suggestions-results-container js-jump-to-suggestions-results-container">
+  
+
+<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-scoped-search d-none" role="option">
+  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="">
+    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
+      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"/></svg>
+    </div>
+
+    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="" width="28" height="28">
+
+    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+    </div>
+
+    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
+        In this repository
+      </span>
+      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
+        All GitHub
+      </span>
+      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+
+    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
+      Jump to
+      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+  </a>
+</li>
+
+  
+
+<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-global-search d-none" role="option">
+  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="">
+    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
+      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"/></svg>
+    </div>
+
+    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="" width="28" height="28">
+
+    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+    </div>
+
+    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
+        In this repository
+      </span>
+      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
+        All GitHub
+      </span>
+      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+
+    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
+      Jump to
+      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+  </a>
+</li>
+
+
+    <li class="d-flex flex-justify-center flex-items-center p-0 f5 js-jump-to-suggestion">
+      <img src="https://github.githubassets.com/images/spinners/octocat-spinner-128.gif" alt="Octocat Spinner Icon" class="m-2" width="28">
+    </li>
+</ul>
+
+            </div>
+      </label>
+</form>  </div>
+</div>
+
+
+      <nav class="d-flex flex-column flex-lg-row flex-self-stretch flex-lg-self-auto" aria-label="Global">
+    <a class="Header-link d-block d-lg-none py-2 py-lg-0 border-top border-lg-top-0 border-white-fade-15" data-ga-click="Header, click, Nav menu - item:dashboard:user" aria-label="Dashboard" href="/dashboard">
+      Dashboard
+</a>
+  <a class="js-selected-navigation-item Header-link  mr-0 mr-lg-3 py-2 py-lg-0 border-top border-lg-top-0 border-white-fade-15" data-hotkey="g p" data-ga-click="Header, click, Nav menu - item:pulls context:user" aria-label="Pull requests you created" data-selected-links="/pulls /pulls/assigned /pulls/mentioned /pulls" href="/pulls">
+    Pull requests
+</a>
+  <a class="js-selected-navigation-item Header-link  mr-0 mr-lg-3 py-2 py-lg-0 border-top border-lg-top-0 border-white-fade-15" data-hotkey="g i" data-ga-click="Header, click, Nav menu - item:issues context:user" aria-label="Issues you created" data-selected-links="/issues /issues/assigned /issues/mentioned /issues" href="/issues">
+    Issues
+</a>
+    <div>
+      <a class="js-selected-navigation-item Header-link  mr-0 mr-lg-3 py-2 py-lg-0 border-top border-lg-top-0 border-white-fade-15" data-ga-click="Header, click, Nav menu - item:marketplace context:user" data-octo-click="marketplace_click" data-octo-dimensions="location:nav_bar" data-selected-links=" /marketplace" href="/marketplace">
+        Marketplace
+</a>        
+    </div>
+
+  <a class="js-selected-navigation-item Header-link  mr-0 mr-lg-3 py-2 py-lg-0 border-top border-lg-top-0 border-white-fade-15" data-ga-click="Header, click, Nav menu - item:explore" data-selected-links="/explore /trending /trending/developers /integrations /integrations/feature/code /integrations/feature/collaborate /integrations/feature/ship showcases showcases_search showcases_landing /explore" href="/explore">
+    Explore
+</a>
+    <a class="Header-link d-block d-lg-none mr-0 mr-lg-3 py-2 py-lg-0 border-top border-lg-top-0 border-white-fade-15" aria-label="View profile and more" aria-expanded="false" aria-haspopup="false" href="https://github.com/jcoliz">
+      <img class="avatar" src="https://avatars3.githubusercontent.com/u/6231610?s=40&amp;v=4" width="20" height="20" alt="@jcoliz" />
+      jcoliz
+</a>
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="E1U3IDKdn5s6RCvgK6r+/Wq+dDAh17DmqWl5vGVNTnrmN5yhstV0/H6444fO7/IYaROIg11i5rnAhUtzIJvjyw==" />
+      <button type="submit" class="Header-link mr-0 mr-lg-3 py-2 py-lg-0 border-top border-lg-top-0 border-white-fade-15 d-lg-none btn-link d-block width-full text-left" data-ga-click="Header, sign out, icon:logout" style="padding-left: 2px;">
+        <svg class="octicon octicon-sign-out v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9V7H8V5h4V3l4 3-4 3zm-2 3H6V3L2 1h8v3h1V1c0-.55-.45-1-1-1H1C.45 0 0 .45 0 1v11.38c0 .39.22.73.55.91L6 16.01V13h4c.55 0 1-.45 1-1V8h-1v4z"/></svg>
+        Sign out
+      </button>
+</form></nav>
+
+    </div>
+
+    <div class="Header-item Header-item--full flex-justify-center d-lg-none position-relative">
+      <div class="css-truncate css-truncate-target width-fit position-absolute left-0 right-0 text-center">
+              <svg class="octicon octicon-repo-forked" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+    <a class="Header-link" href="/awaregroup">awaregroup</a>
+    /
+    <a class="Header-link" href="/awaregroup/WindowsAiEdgeLabCV">WindowsAiEdgeLabCV</a>
+
+</div>
+    </div>
+
+    <div class="Header-item position-relative d-none d-lg-flex">
+      
+
+    </div>
+
+    <div class="Header-item mr-0 mr-lg-3 flex-order-1 flex-lg-order-none">
+      
+    <a aria-label="You have unread notifications" class="Header-link notification-indicator position-relative tooltipped tooltipped-s js-socket-channel js-notification-indicator" data-hotkey="g n" data-ga-click="Header, go to notifications, icon:unread" data-channel="notification-changed:6231610" href="/notifications">
+        <span class="mail-status unread"></span>
+        <svg class="octicon octicon-bell" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 12v1H0v-1l.73-.58c.77-.77.81-2.55 1.19-4.42C2.69 3.23 6 2 6 2c0-.55.45-1 1-1s1 .45 1 1c0 0 3.39 1.23 4.16 5 .38 1.88.42 3.66 1.19 4.42l.66.58H14zm-7 4c1.11 0 2-.89 2-2H5c0 1.11.89 2 2 2z"/></svg>
+</a>
+    </div>
+
+
+    <div class="Header-item position-relative d-none d-lg-flex">
+      <details class="details-overlay details-reset">
+  <summary class="Header-link"
+      aria-label="Create new…"
+      data-ga-click="Header, create new, icon:add">
+    <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"/></svg> <span class="dropdown-caret"></span>
+  </summary>
+  <details-menu class="dropdown-menu dropdown-menu-sw">
+    
+<a role="menuitem" class="dropdown-item" href="/new" data-ga-click="Header, create new repository">
+  New repository
+</a>
+
+  <a role="menuitem" class="dropdown-item" href="/new/import" data-ga-click="Header, import a repository">
+    Import repository
+  </a>
+
+<a role="menuitem" class="dropdown-item" href="https://gist.github.com/" data-ga-click="Header, create new gist">
+  New gist
+</a>
+
+  <a role="menuitem" class="dropdown-item" href="/organizations/new" data-ga-click="Header, create new organization">
+    New organization
+  </a>
+
+
+
+
+  </details-menu>
+</details>
+
+    </div>
+
+    <div class="Header-item position-relative mr-0 d-none d-lg-flex">
+      
+<details class="details-overlay details-reset">
+  <summary class="Header-link"
+    aria-label="View profile and more"
+    data-ga-click="Header, show menu, icon:avatar">
+    <img alt="@jcoliz" class="avatar" src="https://avatars3.githubusercontent.com/u/6231610?s=40&amp;v=4" height="20" width="20">
+    <span class="dropdown-caret"></span>
+  </summary>
+  <details-menu class="dropdown-menu dropdown-menu-sw mt-2" style="width: 180px">
+    <div class="header-nav-current-user css-truncate"><a role="menuitem" class="no-underline user-profile-link px-3 pt-2 pb-2 mb-n2 mt-n1 d-block" href="/jcoliz" data-ga-click="Header, go to profile, text:Signed in as">Signed in as <strong class="css-truncate-target">jcoliz</strong></a></div>
+    <div role="none" class="dropdown-divider"></div>
+
+      <div class="pl-3 pr-3 f6 user-status-container js-user-status-context pb-1" data-url="/users/status?compact=1&amp;link_mentions=0&amp;truncate=1">
+        
+<div class="js-user-status-container
+    user-status-compact rounded-1 px-2 py-1 mt-2
+    border
+  " data-team-hovercards-enabled>
+  <details class="js-user-status-details details-reset details-overlay details-overlay-dark">
+    <summary class="btn-link btn-block link-gray no-underline js-toggle-user-status-edit toggle-user-status-edit " aria-haspopup="dialog" role="menuitem" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.click&quot;,&quot;payload&quot;:{&quot;profile_user_id&quot;:25564124,&quot;target&quot;:&quot;EDIT_USER_STATUS&quot;,&quot;user_id&quot;:6231610,&quot;client_id&quot;:&quot;1028514222.1546629861&quot;,&quot;originating_request_id&quot;:&quot;DB5F:9E32:2A3A2CD:417737D:5CD3171C&quot;,&quot;originating_url&quot;:&quot;https://github.com/awaregroup/WindowsAiEdgeLabCV/blob/master/assets/winmliot.drawio&quot;,&quot;referrer&quot;:&quot;https://github.com/awaregroup/WindowsAiEdgeLabCV/tree/master/assets&quot;}}" data-hydro-click-hmac="0f561fc6a0cdc9949303cd7e2eedf0f6e163788d870e14ec2bbd3f7b759e49af">
+      <div class="d-flex">
+        <div class="f6 lh-condensed user-status-header
+          d-inline-block v-align-middle
+            user-status-emoji-only-header circle
+            pr-2
+"
+            style="max-width: 29px"
+          >
+          <div class="user-status-emoji-container flex-shrink-0 mr-1 mt-1 lh-condensed-ultra v-align-bottom" style="">
+            <g-emoji alias="thought_balloon" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4ad.png">💭</g-emoji>
+          </div>
+        </div>
+        <div class="
+          d-inline-block v-align-middle
+          
+          
+           css-truncate css-truncate-target 
+           user-status-message-wrapper f6"
+           style="line-height: 20px;" >
+          <div class="d-inline-block text-gray-dark v-align-text-top text-left">
+                <span>Rockin' it!</span>
+          </div>
+        </div>
+      </div>
+</summary>    <details-dialog class="details-dialog rounded-1 anim-fade-in fast Box Box--overlay" role="dialog" tabindex="-1">
+      <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="position-relative flex-auto js-user-status-form" action="/users/status?compact=1&amp;link_mentions=0&amp;truncate=1" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="_method" value="put" /><input type="hidden" name="authenticity_token" value="Ba9Hp3+FihEolqGtf8Wb+0cCopxFP0g9tD6i+i5lvGCKsI0GoJa8oY+kdCqE5GGzhf+SM49JYMQqz9Lc8yf4dA==" />
+        <div class="Box-header bg-gray border-bottom p-3">
+          <button class="Box-btn-octicon js-toggle-user-status-edit btn-octicon float-right" type="reset" aria-label="Close dialog" data-close-dialog>
+            <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+          </button>
+          <h3 class="Box-title f5 text-bold text-gray-dark">Edit status</h3>
+        </div>
+        <input type="hidden" name="emoji" class="js-user-status-emoji-field" value="">
+        <input type="hidden" name="organization_id" class="js-user-status-org-id-field" value="">
+        <div class="px-3 py-2 text-gray-dark">
+          <div class="js-characters-remaining-container js-suggester-container position-relative mt-2">
+            <div class="input-group d-table form-group my-0 js-user-status-form-group">
+              <span class="input-group-button d-table-cell v-align-middle" style="width: 1%">
+                <button type="button" aria-label="Choose an emoji" class="btn-outline btn js-toggle-user-status-emoji-picker btn-open-emoji-picker p-0">
+                  <span class="js-user-status-original-emoji" hidden></span>
+                  <span class="js-user-status-custom-emoji"></span>
+                  <span class="js-user-status-no-emoji-icon" >
+                    <svg class="octicon octicon-smiley" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm4.81 12.81a6.72 6.72 0 0 1-2.17 1.45c-.83.36-1.72.53-2.64.53-.92 0-1.81-.17-2.64-.53-.81-.34-1.55-.83-2.17-1.45a6.773 6.773 0 0 1-1.45-2.17A6.59 6.59 0 0 1 1.21 8c0-.92.17-1.81.53-2.64.34-.81.83-1.55 1.45-2.17.62-.62 1.36-1.11 2.17-1.45A6.59 6.59 0 0 1 8 1.21c.92 0 1.81.17 2.64.53.81.34 1.55.83 2.17 1.45.62.62 1.11 1.36 1.45 2.17.36.83.53 1.72.53 2.64 0 .92-.17 1.81-.53 2.64-.34.81-.83 1.55-1.45 2.17zM4 6.8v-.59c0-.66.53-1.19 1.2-1.19h.59c.66 0 1.19.53 1.19 1.19v.59c0 .67-.53 1.2-1.19 1.2H5.2C4.53 8 4 7.47 4 6.8zm5 0v-.59c0-.66.53-1.19 1.2-1.19h.59c.66 0 1.19.53 1.19 1.19v.59c0 .67-.53 1.2-1.19 1.2h-.59C9.53 8 9 7.47 9 6.8zm4 3.2c-.72 1.88-2.91 3-5 3s-4.28-1.13-5-3c-.14-.39.23-1 .66-1h8.59c.41 0 .89.61.75 1z"/></svg>
+                  </span>
+                </button>
+              </span>
+              <input type="text" autocomplete="off" data-maxlength="80" class="js-suggester-field d-table-cell width-full form-control js-user-status-message-field js-characters-remaining-field" placeholder="What's happening?" name="message" value="Rockin&#39; it!" aria-label="What is your current status?">
+              <div class="error">Could not update your status, please try again.</div>
+            </div>
+            <div class="suggester-container">
+              <div class="suggester js-suggester js-navigation-container" data-url="/autocomplete/user-suggestions" data-no-org-url="/autocomplete/user-suggestions" data-org-url="/suggestions" hidden>
+              </div>
+            </div>
+            <div style="margin-left: 53px" class="my-1 text-small label-characters-remaining js-characters-remaining" data-suffix="remaining" hidden>
+              80 remaining
+            </div>
+          </div>
+          <include-fragment class="js-user-status-emoji-picker" data-url="/users/status/emoji"></include-fragment>
+          <div class="overflow-auto ml-n3 mr-n3 px-3 border-bottom" style="max-height: 33vh">
+            <div class="user-status-suggestions js-user-status-suggestions collapsed overflow-hidden">
+              <h4 class="f6 text-normal my-3">Suggestions:</h4>
+              <div class="mx-3 mt-2 clearfix">
+                  <div class="float-left col-6">
+                      <button type="button" value=":palm_tree:" class="d-flex flex-items-baseline flex-items-stretch lh-condensed f6 btn-link link-gray no-underline js-predefined-user-status mb-1">
+                        <div class="emoji-status-width mr-2 v-align-middle js-predefined-user-status-emoji">
+                          <g-emoji alias="palm_tree" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f334.png">🌴</g-emoji>
+                        </div>
+                        <div class="d-flex flex-items-center no-underline js-predefined-user-status-message ws-normal text-left" style="border-left: 1px solid transparent">
+                          On vacation
+                        </div>
+                      </button>
+                      <button type="button" value=":face_with_thermometer:" class="d-flex flex-items-baseline flex-items-stretch lh-condensed f6 btn-link link-gray no-underline js-predefined-user-status mb-1">
+                        <div class="emoji-status-width mr-2 v-align-middle js-predefined-user-status-emoji">
+                          <g-emoji alias="face_with_thermometer" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f912.png">🤒</g-emoji>
+                        </div>
+                        <div class="d-flex flex-items-center no-underline js-predefined-user-status-message ws-normal text-left" style="border-left: 1px solid transparent">
+                          Out sick
+                        </div>
+                      </button>
+                  </div>
+                  <div class="float-left col-6">
+                      <button type="button" value=":house:" class="d-flex flex-items-baseline flex-items-stretch lh-condensed f6 btn-link link-gray no-underline js-predefined-user-status mb-1">
+                        <div class="emoji-status-width mr-2 v-align-middle js-predefined-user-status-emoji">
+                          <g-emoji alias="house" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3e0.png">🏠</g-emoji>
+                        </div>
+                        <div class="d-flex flex-items-center no-underline js-predefined-user-status-message ws-normal text-left" style="border-left: 1px solid transparent">
+                          Working from home
+                        </div>
+                      </button>
+                      <button type="button" value=":dart:" class="d-flex flex-items-baseline flex-items-stretch lh-condensed f6 btn-link link-gray no-underline js-predefined-user-status mb-1">
+                        <div class="emoji-status-width mr-2 v-align-middle js-predefined-user-status-emoji">
+                          <g-emoji alias="dart" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3af.png">🎯</g-emoji>
+                        </div>
+                        <div class="d-flex flex-items-center no-underline js-predefined-user-status-message ws-normal text-left" style="border-left: 1px solid transparent">
+                          Focusing
+                        </div>
+                      </button>
+                  </div>
+              </div>
+            </div>
+            <div class="user-status-limited-availability-container">
+              <div class="form-checkbox my-0">
+                <input type="checkbox" name="limited_availability" value="1" class="js-user-status-limited-availability-checkbox" data-default-message="I may be slow to respond." aria-describedby="limited-availability-help-text-truncate-true" id="limited-availability-truncate-true">
+                <label class="d-block f5 text-gray-dark mb-1" for="limited-availability-truncate-true">
+                  Busy
+                </label>
+                <p class="note" id="limited-availability-help-text-truncate-true">
+                  When others mention you, assign you, or request your review,
+                  GitHub will let them know that you have limited availability.
+                </p>
+              </div>
+            </div>
+          </div>
+            
+
+<div class="d-inline-block f5 mr-2 pt-3 pb-2" >
+  <div class="d-inline-block mr-1">
+    Clear status
+  </div>
+
+  <details class="js-user-status-expire-drop-down f6 dropdown details-reset details-overlay d-inline-block mr-2">
+    <summary class="f5 btn-link link-gray-dark border px-2 py-1 rounded-1" aria-haspopup="true">
+      <div class="js-user-status-expiration-interval-selected d-inline-block v-align-baseline">
+        Never
+      </div>
+      <div class="dropdown-caret"></div>
+    </summary>
+
+    <ul class="dropdown-menu dropdown-menu-se pl-0 overflow-auto" style="width: 220px; max-height: 15.5em">
+      <li>
+        <button type="button" class="btn-link dropdown-item js-user-status-expire-button ws-normal" title="Never">
+          <span class="d-inline-block text-bold mb-1">Never</span>
+          <div class="f6 lh-condensed">Keep this status until you clear your status or edit your status.</div>
+        </button>
+      </li>
+      <li class="dropdown-divider" role="none"></li>
+        <li>
+          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 30 minutes" value="2019-05-08T11:21:33-07:00">
+            in 30 minutes
+          </button>
+        </li>
+        <li>
+          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 1 hour" value="2019-05-08T11:51:33-07:00">
+            in 1 hour
+          </button>
+        </li>
+        <li>
+          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="in 4 hours" value="2019-05-08T14:51:33-07:00">
+            in 4 hours
+          </button>
+        </li>
+        <li>
+          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="today" value="2019-05-08T23:59:59-07:00">
+            today
+          </button>
+        </li>
+        <li>
+          <button type="button" class="btn-link dropdown-item ws-normal js-user-status-expire-button" title="this week" value="2019-05-12T23:59:59-07:00">
+            this week
+          </button>
+        </li>
+    </ul>
+  </details>
+  <input class="js-user-status-expiration-date-input" type="hidden" name="expires_at" value="">
+</div>
+
+          <include-fragment class="js-user-status-org-picker" data-url="/users/status/organizations"></include-fragment>
+        </div>
+        <div class="d-flex flex-items-center flex-justify-between p-3 border-top">
+          <button type="submit"  class="width-full btn btn-primary mr-2 js-user-status-submit">
+            Set status
+          </button>
+          <button type="button"  class="width-full js-clear-user-status-button btn ml-2 js-user-status-exists">
+            Clear status
+          </button>
+        </div>
+</form>    </details-dialog>
+  </details>
+</div>
+
+      </div>
+      <div role="none" class="dropdown-divider"></div>
+
+
+    <a role="menuitem" class="dropdown-item" href="/jcoliz" data-ga-click="Header, go to profile, text:your profile">Your profile</a>
+    <a role="menuitem" class="dropdown-item" href="/jcoliz?tab=repositories" data-ga-click="Header, go to repositories, text:your repositories">Your repositories</a>
+
+    <a role="menuitem" class="dropdown-item" href="/jcoliz?tab=projects" data-ga-click="Header, go to projects, text:your projects">Your projects</a>
+
+    <a role="menuitem" class="dropdown-item" href="/jcoliz?tab=stars" data-ga-click="Header, go to starred repos, text:your stars">Your stars</a>
+      <a role="menuitem" class="dropdown-item" href="https://gist.github.com/" data-ga-click="Header, your gists, text:your gists">Your gists</a>
+
+    <div role="none" class="dropdown-divider"></div>
+    <a role="menuitem" class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">Help</a>
+    <a role="menuitem" class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">Settings</a>
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="Q/VHlGyFZ1Bv5wWlg3gGzQ9nNMc50D0indxIClWVHyu2l+wV7M2MNysbzcJmPQooDMrIdEVla330MHrFEEOymg==" />
+      
+      <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout" role="menuitem">
+        Sign out
+      </button>
+</form>  </details-menu>
+</details>
+
+    </div>
+
+  </header>
+
+      
+
+  </div>
+
+  <div id="start-of-content" class="show-on-focus"></div>
+
+
+    <div id="js-flash-container">
+
+</div>
+
+
+
+  <div class="application-main " data-commit-hovercards-enabled>
+        <div itemscope itemtype="http://schema.org/SoftwareSourceCode" class="">
+    <main  >
+      
+
+
+  
+
+
+
+  
+
+
+
+
+  <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav pt-0 pt-lg-4 ">
+    <div class="repohead-details-container clearfix container-lg p-responsive d-none d-lg-block">
+
+      <ul class="pagehead-actions">
+
+
+
+  <li>
+    
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-remote="true" class="clearfix js-social-form js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="CSS0o7cGFwrCd5FWVOKzioIb3UE7MpaE0f6dbrSVAwdwf1oc7RNjnGrbxQpczLMA5XPmM2lmom/Y0xGAGO949w==" />      <input type="hidden" name="repository_id" value="185132931">
+
+      <details class="details-reset details-overlay select-menu float-left">
+        <summary class="select-menu-button float-left btn btn-sm btn-with-count" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;WATCH_BUTTON&quot;,&quot;repository_id&quot;:185132931,&quot;client_id&quot;:&quot;1028514222.1546629861&quot;,&quot;originating_request_id&quot;:&quot;DB5F:9E32:2A3A2CD:417737D:5CD3171C&quot;,&quot;originating_url&quot;:&quot;https://github.com/awaregroup/WindowsAiEdgeLabCV/blob/master/assets/winmliot.drawio&quot;,&quot;referrer&quot;:&quot;https://github.com/awaregroup/WindowsAiEdgeLabCV/tree/master/assets&quot;,&quot;user_id&quot;:6231610}}" data-hydro-click-hmac="b2f18cc0ea6b2b469d036206b677e896db4db557262f3e58d7fca0f50b7bf5f5" data-ga-click="Repository, click Watch settings, action:blob#show">          <span data-menu-button>
+              <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+              Watch
+          </span>
+</summary>        <details-menu
+          class="select-menu-modal position-absolute mt-5"
+          style="z-index: 99;">
+          <div class="select-menu-header">
+            <span class="select-menu-title">Notifications</span>
+          </div>
+          <div class="select-menu-list">
+            <button type="submit" name="do" value="included" class="select-menu-item width-full" aria-checked="true" role="menuitemradio">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <div class="select-menu-item-text">
+                <span class="select-menu-item-heading">Not watching</span>
+                <span class="description">Be notified only when participating or @mentioned.</span>
+                <span class="hidden-select-button-text" data-menu-button-contents>
+                  <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+                  Watch
+                </span>
+              </div>
+            </button>
+
+            <button type="submit" name="do" value="release_only" class="select-menu-item width-full" aria-checked="false" role="menuitemradio">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <div class="select-menu-item-text">
+                <span class="select-menu-item-heading">Releases only</span>
+                <span class="description">Be notified of new releases, and when participating or @mentioned.</span>
+                <span class="hidden-select-button-text" data-menu-button-contents>
+                  <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+                  Unwatch releases
+                </span>
+              </div>
+            </button>
+
+            <button type="submit" name="do" value="subscribed" class="select-menu-item width-full" aria-checked="false" role="menuitemradio">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <div class="select-menu-item-text">
+                <span class="select-menu-item-heading">Watching</span>
+                <span class="description">Be notified of all conversations.</span>
+                <span class="hidden-select-button-text" data-menu-button-contents>
+                  <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+                  Unwatch
+                </span>
+              </div>
+            </button>
+
+            <button type="submit" name="do" value="ignore" class="select-menu-item width-full" aria-checked="false" role="menuitemradio">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <div class="select-menu-item-text">
+                <span class="select-menu-item-heading">Ignoring</span>
+                <span class="description">Never be notified.</span>
+                <span class="hidden-select-button-text" data-menu-button-contents>
+                  <svg class="octicon octicon-mute v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 2.81v10.38c0 .67-.81 1-1.28.53L3 10H1c-.55 0-1-.45-1-1V7c0-.55.45-1 1-1h2l3.72-3.72C7.19 1.81 8 2.14 8 2.81zm7.53 3.22l-1.06-1.06-1.97 1.97-1.97-1.97-1.06 1.06L11.44 8 9.47 9.97l1.06 1.06 1.97-1.97 1.97 1.97 1.06-1.06L13.56 8l1.97-1.97z"/></svg>
+                  Stop ignoring
+                </span>
+              </div>
+            </button>
+          </div>
+        </details-menu>
+      </details>
+        <a class="social-count js-social-count"
+          href="/awaregroup/WindowsAiEdgeLabCV/watchers"
+          aria-label="5 users are watching this repository">
+          5
+        </a>
+</form>
+  </li>
+
+  <li>
+      <div class="js-toggler-container js-social-container starring-container ">
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="starred js-social-form" action="/awaregroup/WindowsAiEdgeLabCV/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="wwzcjYt/n/RemolKfrPBH2i/SKZ3T4bcDvhQknKZVM9S/2faNIHu5qTOvK9V8pYH9Awh0u0SahD9sPqxapZWCA==" />
+      <input type="hidden" name="context" value="repository"></input>
+      <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Unstar awaregroup/WindowsAiEdgeLabCV" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;UNSTAR_BUTTON&quot;,&quot;repository_id&quot;:185132931,&quot;client_id&quot;:&quot;1028514222.1546629861&quot;,&quot;originating_request_id&quot;:&quot;DB5F:9E32:2A3A2CD:417737D:5CD3171C&quot;,&quot;originating_url&quot;:&quot;https://github.com/awaregroup/WindowsAiEdgeLabCV/blob/master/assets/winmliot.drawio&quot;,&quot;referrer&quot;:&quot;https://github.com/awaregroup/WindowsAiEdgeLabCV/tree/master/assets&quot;,&quot;user_id&quot;:6231610}}" data-hydro-click-hmac="055079136b7c69a3f31b2fb3f0ecb78dd339cbfd6314f14f4ebb4c4cfad1fac2" data-ga-click="Repository, click unstar button, action:blob#show; text:Unstar">        <svg class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"/></svg>
+        Unstar
+</button>        <a class="social-count js-social-count" href="/awaregroup/WindowsAiEdgeLabCV/stargazers"
+           aria-label="0 users starred this repository">
+          0
+        </a>
+</form>
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="unstarred js-social-form" action="/awaregroup/WindowsAiEdgeLabCV/star" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="VMVUi/IUVPuhJoVvXW8Fb9BUbmOOuQumtX6wXjFgfqUzQ5ZUMzKyy988CodqeKx7BSbRoH6Vccd5//EpnUcLkQ==" />
+      <input type="hidden" name="context" value="repository"></input>
+      <button type="submit" class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Star awaregroup/WindowsAiEdgeLabCV" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;STAR_BUTTON&quot;,&quot;repository_id&quot;:185132931,&quot;client_id&quot;:&quot;1028514222.1546629861&quot;,&quot;originating_request_id&quot;:&quot;DB5F:9E32:2A3A2CD:417737D:5CD3171C&quot;,&quot;originating_url&quot;:&quot;https://github.com/awaregroup/WindowsAiEdgeLabCV/blob/master/assets/winmliot.drawio&quot;,&quot;referrer&quot;:&quot;https://github.com/awaregroup/WindowsAiEdgeLabCV/tree/master/assets&quot;,&quot;user_id&quot;:6231610}}" data-hydro-click-hmac="538a9f3c6a834f430342c058ad9042d27b695b408d0840c9028ef0caf462f623" data-ga-click="Repository, click star button, action:blob#show; text:Star">        <svg class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"/></svg>
+        Star
+</button>        <a class="social-count js-social-count" href="/awaregroup/WindowsAiEdgeLabCV/stargazers"
+           aria-label="0 users starred this repository">
+          0
+        </a>
+</form>  </div>
+
+  </li>
+
+  <li>
+          <details class="details-reset details-overlay details-overlay-dark d-inline-block float-left">
+            <summary class="btn btn-sm btn-with-count" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;FORK_BUTTON&quot;,&quot;repository_id&quot;:185132931,&quot;client_id&quot;:&quot;1028514222.1546629861&quot;,&quot;originating_request_id&quot;:&quot;DB5F:9E32:2A3A2CD:417737D:5CD3171C&quot;,&quot;originating_url&quot;:&quot;https://github.com/awaregroup/WindowsAiEdgeLabCV/blob/master/assets/winmliot.drawio&quot;,&quot;referrer&quot;:&quot;https://github.com/awaregroup/WindowsAiEdgeLabCV/tree/master/assets&quot;,&quot;user_id&quot;:6231610}}" data-hydro-click-hmac="5e315fd762ea6dd307781515abd5281fc219758ef27bca578ef73123cbc7880f" data-ga-click="Repository, show fork modal, action:blob#show; text:Fork" title="Fork your own copy of awaregroup/WindowsAiEdgeLabCV to your account">              <svg class="octicon octicon-repo-forked v-align-text-bottom" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+              Fork
+</summary>            <details-dialog
+              class="anim-fade-in fast Box Box--overlay d-flex flex-column"
+              src="/awaregroup/WindowsAiEdgeLabCV/fork?fragment=1"
+              preload>
+              <div class="Box-header">
+                <button class="Box-btn-octicon btn-octicon float-right" type="button" aria-label="Close dialog" data-close-dialog>
+                  <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+                </button>
+                <h3 class="Box-title">Fork WindowsAiEdgeLabCV</h3>
+              </div>
+              <div class="overflow-auto text-center">
+                <include-fragment>
+                  <div class="octocat-spinner my-3" aria-label="Loading..."></div>
+                  <p class="f5 text-gray">If this dialog fails to load, you can visit <a href="/awaregroup/WindowsAiEdgeLabCV/fork">the fork page</a> directly.</p>
+                </include-fragment>
+              </div>
+            </details-dialog>
+          </details>
+
+    <a href="/awaregroup/WindowsAiEdgeLabCV/network/members" class="social-count"
+       aria-label="2 users forked this repository">
+      2
+    </a>
+  </li>
+</ul>
+
+      <h1 class="public ">
+    <svg class="octicon octicon-repo-forked" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+  <span class="author" itemprop="author"><a class="url fn" rel="author" data-hovercard-type="organization" data-hovercard-url="/orgs/awaregroup/hovercard" href="/awaregroup">awaregroup</a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong itemprop="name"><a data-pjax="#js-repo-pjax-container" href="/awaregroup/WindowsAiEdgeLabCV">WindowsAiEdgeLabCV</a></strong>
+  
+
+    <span class="fork-flag" data-repository-hovercards-enabled>
+      <span class="text">forked from <a data-hovercard-type="repository" data-hovercard-url="/jcoliz/WindowsAiEdgeLabCV/hovercard" href="/jcoliz/WindowsAiEdgeLabCV">jcoliz/WindowsAiEdgeLabCV</a></span>
+    </span>
+</h1>
+
+    </div>
+    
+<nav class="reponav js-repo-nav js-sidenav-container-pjax container-lg p-responsive d-none d-lg-block"
+     itemscope
+     itemtype="http://schema.org/BreadcrumbList"
+    aria-label="Repository"
+     data-pjax="#js-repo-pjax-container">
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a class="js-selected-navigation-item selected reponav-item" itemprop="url" data-hotkey="g c" aria-current="page" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages /awaregroup/WindowsAiEdgeLabCV" href="/awaregroup/WindowsAiEdgeLabCV">
+      <svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg>
+      <span itemprop="name">Code</span>
+      <meta itemprop="position" content="1">
+</a>  </span>
+
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a data-hotkey="g p" itemprop="url" class="js-selected-navigation-item reponav-item" data-selected-links="repo_pulls checks /awaregroup/WindowsAiEdgeLabCV/pulls" href="/awaregroup/WindowsAiEdgeLabCV/pulls">
+      <svg class="octicon octicon-git-pull-request" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+      <span itemprop="name">Pull requests</span>
+      <span class="Counter">0</span>
+      <meta itemprop="position" content="3">
+</a>  </span>
+
+
+
+    <a data-hotkey="g b" class="js-selected-navigation-item reponav-item" data-selected-links="repo_projects new_repo_project repo_project /awaregroup/WindowsAiEdgeLabCV/projects" href="/awaregroup/WindowsAiEdgeLabCV/projects">
+      <svg class="octicon octicon-project" viewBox="0 0 15 16" version="1.1" width="15" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
+      Projects
+      <span class="Counter" >0</span>
+</a>
+
+    <a class="js-selected-navigation-item reponav-item" data-hotkey="g w" data-selected-links="repo_wiki /awaregroup/WindowsAiEdgeLabCV/wiki" href="/awaregroup/WindowsAiEdgeLabCV/wiki">
+      <svg class="octicon octicon-book" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z"/></svg>
+      Wiki
+</a>
+    <a class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors dependency_graph pulse people alerts /awaregroup/WindowsAiEdgeLabCV/pulse" href="/awaregroup/WindowsAiEdgeLabCV/pulse">
+      <svg class="octicon octicon-graph" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z"/></svg>
+      Insights
+</a>
+
+</nav>
+
+  <div class="reponav-wrapper reponav-small d-lg-none">
+  <nav class="reponav js-reponav text-center no-wrap"
+       itemscope
+       itemtype="http://schema.org/BreadcrumbList">
+
+    <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+      <a class="js-selected-navigation-item selected reponav-item" itemprop="url" aria-current="page" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages /awaregroup/WindowsAiEdgeLabCV" href="/awaregroup/WindowsAiEdgeLabCV">
+        <span itemprop="name">Code</span>
+        <meta itemprop="position" content="1">
+</a>    </span>
+
+
+    <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+      <a itemprop="url" class="js-selected-navigation-item reponav-item" data-selected-links="repo_pulls checks /awaregroup/WindowsAiEdgeLabCV/pulls" href="/awaregroup/WindowsAiEdgeLabCV/pulls">
+        <span itemprop="name">Pull requests</span>
+        <span class="Counter">0</span>
+        <meta itemprop="position" content="3">
+</a>    </span>
+
+
+      <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+        <a itemprop="url" class="js-selected-navigation-item reponav-item" data-selected-links="repo_projects new_repo_project repo_project /awaregroup/WindowsAiEdgeLabCV/projects" href="/awaregroup/WindowsAiEdgeLabCV/projects">
+          <span itemprop="name">Projects</span>
+          <span class="Counter">0</span>
+          <meta itemprop="position" content="5">
+</a>      </span>
+
+      <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+        <a itemprop="url" class="js-selected-navigation-item reponav-item" data-selected-links="repo_wiki /awaregroup/WindowsAiEdgeLabCV/wiki" href="/awaregroup/WindowsAiEdgeLabCV/wiki">
+          <span itemprop="name">Wiki</span>
+          <meta itemprop="position" content="6">
+</a>      </span>
+
+      <a class="js-selected-navigation-item reponav-item" data-selected-links="pulse /awaregroup/WindowsAiEdgeLabCV/pulse" href="/awaregroup/WindowsAiEdgeLabCV/pulse">
+        Pulse
+</a>
+
+  </nav>
+</div>
+
+
+  </div>
+<div class="container-lg new-discussion-timeline experiment-repo-nav  p-responsive">
+  <div class="repository-content ">
+
+    
+    
+
+
+
+  
+    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/awaregroup/WindowsAiEdgeLabCV/blob/43cf8223f76a502611d19ccb4dea2b0519824b13/assets/winmliot.drawio">Permalink</a>
+
+    <!-- blob contrib key: blob_contributors:v21:96a54866b6485bffb0eba662ee11edd8 -->
+      
+
+    <div class="d-flex flex-items-start mb-3 flex-column flex-md-row">
+      <span class="d-flex flex-justify-between width-full width-md-auto">
+        
+<details class="details-reset details-overlay select-menu branch-select-menu  hx_rsm" id="branch-select-menu">
+  <summary class="btn btn-sm select-menu-button css-truncate"
+           data-hotkey="w"
+           
+           title="Switch branches or tags">
+    <i>Branch:</i>
+    <span class="css-truncate-target">master</span>
+  </summary>
+
+  <details-menu class="select-menu-modal hx_rsm-modal position-absolute" style="z-index: 99;" src="/awaregroup/WindowsAiEdgeLabCV/ref-list/master/assets/winmliot.drawio?source_action=show&amp;source_controller=blob" preload>
+    <include-fragment class="select-menu-loading-overlay anim-pulse">
+      <svg height="32" class="octicon octicon-octoface" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M14.7 5.34c.13-.32.55-1.59-.13-3.31 0 0-1.05-.33-3.44 1.3-1-.28-2.07-.32-3.13-.32s-2.13.04-3.13.32c-2.39-1.64-3.44-1.3-3.44-1.3-.68 1.72-.26 2.99-.13 3.31C.49 6.21 0 7.33 0 8.69 0 13.84 3.33 15 7.98 15S16 13.84 16 8.69c0-1.36-.49-2.48-1.3-3.35zM8 14.02c-3.3 0-5.98-.15-5.98-3.35 0-.76.38-1.48 1.02-2.07 1.07-.98 2.9-.46 4.96-.46 2.07 0 3.88-.52 4.96.46.65.59 1.02 1.3 1.02 2.07 0 3.19-2.68 3.35-5.98 3.35zM5.49 9.01c-.66 0-1.2.8-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.54-1.78-1.2-1.78zm5.02 0c-.66 0-1.2.79-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.53-1.78-1.2-1.78z"/></svg>
+    </include-fragment>
+  </details-menu>
+</details>
+
+        <div class="BtnGroup flex-shrink-0 d-md-none">
+          <a href="/awaregroup/WindowsAiEdgeLabCV/find/master"
+                class="js-pjax-capture-input btn btn-sm BtnGroup-item"
+                data-pjax
+                data-hotkey="t">
+            Find file
+          </a>
+          <clipboard-copy value="assets/winmliot.drawio" class="btn btn-sm BtnGroup-item">
+            Copy path
+          </clipboard-copy>
+        </div>
+      </span>
+      <h2 id="blob-path" class="breadcrumb flex-auto min-width-0 text-normal flex-md-self-center ml-md-2 mr-md-3 my-2 my-md-0">
+        <span class="js-repo-root text-bold"><span class="js-path-segment"><a data-pjax="true" href="/awaregroup/WindowsAiEdgeLabCV"><span>WindowsAiEdgeLabCV</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/awaregroup/WindowsAiEdgeLabCV/tree/master/assets"><span>assets</span></a></span><span class="separator">/</span><strong class="final-path">winmliot.drawio</strong>
+      </h2>
+
+      <div class="BtnGroup flex-shrink-0 d-none d-md-inline-block">
+        <a href="/awaregroup/WindowsAiEdgeLabCV/find/master"
+              class="js-pjax-capture-input btn btn-sm BtnGroup-item"
+              data-pjax
+              data-hotkey="t">
+          Find file
+        </a>
+        <clipboard-copy value="assets/winmliot.drawio" class="btn btn-sm BtnGroup-item">
+          Copy path
+        </clipboard-copy>
+      </div>
+    </div>
+
+
+
+    <include-fragment src="/awaregroup/WindowsAiEdgeLabCV/contributors/master/assets/winmliot.drawio" class="Box Box--condensed commit-loader">
+      <div class="Box-body bg-blue-light f6">
+        Fetching contributors&hellip;
+      </div>
+
+      <div class="Box-body d-flex flex-items-center" >
+          <img alt="" class="loader-loading mr-2" src="https://github.githubassets.com/images/spinners/octocat-spinner-32-EAF2F5.gif" width="16" height="16" />
+        <span class="text-red h6 loader-error">Cannot retrieve contributors at this time</span>
+      </div>
+</include-fragment>
+
+
+
+
+
+    <div class="Box mt-3 position-relative">
+      
+<div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
+
+  <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+      1 lines (1 sloc)
+      <span class="file-info-divider"></span>
+    43.9 KB
+  </div>
+
+  <div class="d-flex py-1 py-md-0 flex-auto flex-order-1 flex-md-order-2 flex-sm-grow-0 flex-justify-between">
+
+    <div class="BtnGroup">
+      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/awaregroup/WindowsAiEdgeLabCV/raw/master/assets/winmliot.drawio">Raw</a>
+        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/awaregroup/WindowsAiEdgeLabCV/blame/master/assets/winmliot.drawio">Blame</a>
+      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/awaregroup/WindowsAiEdgeLabCV/commits/master/assets/winmliot.drawio">History</a>
+    </div>
+
+
+    <div>
+            <a class="btn-octicon tooltipped tooltipped-nw hide-sm"
+               href="https://desktop.github.com"
+               aria-label="Open this file in GitHub Desktop"
+               data-ga-click="Repository, open with desktop, type:windows">
+                <svg class="octicon octicon-device-desktop" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M15 2H1c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5.34c-.25.61-.86 1.39-2.34 2h8c-1.48-.61-2.09-1.39-2.34-2H15c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 9H1V3h14v8z"/></svg>
+            </a>
+
+            <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form js-update-url-with-hash" action="/awaregroup/WindowsAiEdgeLabCV/edit/master/assets/winmliot.drawio" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="bupl/hsHcArE9LLyQhclUwxkeU30HL15ytJ/fdhdIKqeE6onKOxlIMQYmn4QzHOSJmYQrq/4XcTuY04uslsSYA==" />
+              <button class="btn-octicon tooltipped tooltipped-nw" type="submit"
+                aria-label="Edit the file in your fork of this project" data-hotkey="e" data-disable-with>
+                <svg class="octicon octicon-pencil" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"/></svg>
+              </button>
+</form>
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/awaregroup/WindowsAiEdgeLabCV/delete/master/assets/winmliot.drawio" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="UFpDAtxx3S7E8BLEwEUFjyxvwk/GeoHxXPiDBFQL1uGBVNUrCRXn30YfNeKKf26HARQaTC5unmiCoXjeTwOwgw==" />
+            <button class="btn-octicon btn-octicon-danger tooltipped tooltipped-nw" type="submit"
+              aria-label="Delete the file in your fork of this project" data-disable-with>
+              <svg class="octicon octicon-trashcan" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"/></svg>
+            </button>
+</form>    </div>
+  </div>
+</div>
+
+      
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-text ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tr>
+        <td id="L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="LC1" class="blob-code blob-code-inner js-file-line">&lt;mxfile modified=&quot;2019-05-06T12:08:18.903Z&quot; host=&quot;draw.io.&quot; agent=&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.18 Safari/537.36 Edg/75.0.139.4&quot; etag=&quot;Y_KGbl08lVoD6j-DhKan&quot; version=&quot;10.6.6&quot; type=&quot;device&quot;&gt;&lt;diagram id=&quot;4iKpPFi5gDTSW6ObWFgp&quot; name=&quot;Page-1&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;</td>
+      </tr>
+</table>
+
+  <details class="details-reset details-overlay BlobToolbar position-absolute js-file-line-actions dropdown d-none" aria-hidden="true">
+    <summary class="btn-octicon ml-0 px-2 p-0 bg-white border border-gray-dark rounded-1" aria-label="Inline file action toolbar">
+      <svg class="octicon octicon-kebab-horizontal" viewBox="0 0 13 16" version="1.1" width="13" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM13 7.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/></svg>
+    </summary>
+    <details-menu>
+      <ul class="BlobToolbar-dropdown dropdown-menu dropdown-menu-se mt-2" style="width:185px">
+        <li><clipboard-copy role="menuitem" class="dropdown-item" id="js-copy-lines" style="cursor:pointer;" data-original-text="Copy lines">Copy lines</clipboard-copy></li>
+        <li><clipboard-copy role="menuitem" class="dropdown-item" id="js-copy-permalink" style="cursor:pointer;" data-original-text="Copy permalink">Copy permalink</clipboard-copy></li>
+        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/awaregroup/WindowsAiEdgeLabCV/blame/43cf8223f76a502611d19ccb4dea2b0519824b13/assets/winmliot.drawio">View git blame</a></li>
+      </ul>
+    </details-menu>
+  </details>
+
+  </div>
+
+    </div>
+
+  
+
+  <details class="details-reset details-overlay details-overlay-dark">
+    <summary data-hotkey="l" aria-label="Jump to line"></summary>
+    <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast linejump" aria-label="Jump to line">
+      <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-jump-to-line-form Box-body d-flex" action="" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+        <input class="form-control flex-auto mr-3 linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" aria-label="Jump to line" autofocus>
+        <button type="submit" class="btn" data-close-dialog>Go</button>
+</form>    </details-dialog>
+  </details>
+
+
+
+  </div>
+  <div class="modal-backdrop js-touch-events"></div>
+</div>
+
+    </main>
+  </div>
+  
+
+  </div>
+
+        
+<div class="footer container-lg width-full p-responsive" role="contentinfo">
+  <div class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <ul class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+      <li class="mr-3 mr-lg-0">&copy; 2019 <span title="0.73250s from unicorn-5db8d6f897-z6v5z">GitHub</span>, Inc.</li>
+        <li class="mr-3 mr-lg-0"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
+        <li class="mr-3 mr-lg-0"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
+        <li class="mr-3 mr-lg-0"><a data-ga-click="Footer, go to security, text:security" href="https://github.com/security">Security</a></li>
+        <li class="mr-3 mr-lg-0"><a href="https://githubstatus.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+        <li><a data-ga-click="Footer, go to help, text:help" href="https://help.github.com">Help</a></li>
+    </ul>
+
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mx-lg-4" href="https://github.com">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+</a>
+   <ul class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+        <li class="mr-3 mr-lg-0"><a data-ga-click="Footer, go to contact, text:contact" href="https://github.com/contact">Contact GitHub</a></li>
+        <li class="mr-3 mr-lg-0"><a href="https://github.com/pricing" data-ga-click="Footer, go to Pricing, text:Pricing">Pricing</a></li>
+      <li class="mr-3 mr-lg-0"><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li class="mr-3 mr-lg-0"><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+        <li class="mr-3 mr-lg-0"><a href="https://github.blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a data-ga-click="Footer, go to about, text:about" href="https://github.com/about">About</a></li>
+
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+</div>
+
+
+
+  <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg>
+    <button type="button" class="flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+    </button>
+    You can’t perform that action at this time.
+  </div>
+
+
+    
+    <script crossorigin="anonymous" integrity="sha512-fsXEOzxcyI4bwyK9yALfG5XmX/wsz+blNjXYgVcGPP0nQAObJhO7zddWSFyDkxXZkZi953OsEs0pFz41tfvUhQ==" type="application/javascript" src="https://github.githubassets.com/assets/frameworks-a0f1f08f.js"></script>
+    
+    <script crossorigin="anonymous" async="async" integrity="sha512-G2vTGb6AqVPEbg4tJo9INlcQK/W2mOZuB24Myj2zWzxxfhqNNGL2xKjWRRfbnzbhjB9T/GItlP+MnAjsFcIeFg==" type="application/javascript" src="https://github.githubassets.com/assets/github-bootstrap-7f5e997a.js"></script>
+    
+    
+    
+  <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner" hidden
+    >
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg>
+    <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+  </div>
+  <template id="site-details-dialog">
+  <details class="details-reset details-overlay details-overlay-dark lh-default text-gray-dark" open>
+    <summary aria-haspopup="dialog" aria-label="Close dialog"></summary>
+    <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast">
+      <button class="Box-btn-octicon m-0 btn-octicon position-absolute right-0 top-0" type="button" aria-label="Close dialog" data-close-dialog>
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+      </button>
+      <div class="octocat-spinner my-6 js-details-dialog-spinner"></div>
+    </details-dialog>
+  </details>
+</template>
+
+  <div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;" tabindex="0">
+  <div class="Popover-message Popover-message--bottom-left Popover-message--large Box box-shadow-large" style="width:360px;">
+  </div>
+</div>
+
+  <div aria-live="polite" class="js-global-screen-reader-notice sr-only"></div>
+
+  </body>
+</html>
+
