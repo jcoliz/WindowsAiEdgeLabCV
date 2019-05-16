@@ -202,19 +202,40 @@ Device Administrator Password |
 
 # Step 1: Train the Model
 
-1. Plug the USB camera into your development PC.
-1. Using the Camera app on your development PC, take at least 5 pictures each of your objects. Store these pictures on your computer. Organize all the photos for each object into a folder named for this object. It will make them easier to upload.
-1. Log into the [Custom Vision Portal](https://www.customvision.ai/)
+## 1.1 - Gathering Training data
+1. Plug the USB camera into your lab PC
+1. Open the Windows Camera app from the Start Menu
+1. Take between 10-15 photos of each object you'd like to recognize with your model. **NOTE: More photos with different rotations and focal length should theoretically make for a better model!**
+1. Confirm your photos are in the ```Pictures > Camera Roll``` folder
+
+## 1.2 - Creating a Custom Vision Service Project
+1. Log into the [Custom Vision Service portal](https://www.customvision.ai/) using the provided Azure credentials (found in the credentials.txt file - see above)
 1. Choose the Directory associated with your Azure account
-1. Create a New Project. Be sure to choose a "compact" domain.
-1. Upload them to your custom vision project. I recommend to upload one object at a time, so it's easy to apply a tag to all your images. Each time you upload all the images for a given object, specify the tag at that time.
-1. Select "Train" to train the model
-1. Select "Quick Test" to test the model.
-. Using the camera app on your PC, take one more picture of one of the objects
-1. Upload the picture you took, verify that it was predicted correctly.
-1. Export the model. From the "Performance" tab, select the "Export" command.
-1. Choose "ONNX", then "ONNX1.2" version.
-1. After downloading, rename the file "CustomVision.onnx"
+1. Click 'New Project'
+1. Enter the following values and click 'Create Project'
+
+|Name                 |Value                |
+|---------------------|---------------------|
+|Project Name         |[your choice]        |
+|Project Types        |Classification       |
+|Classification Types |Multiclass           |
+|Domains              |General **(compact)**|
+
+## 1.3 - Importing Images into Custom Vision Service
+1. Click the 'Add Images' button and browse to the ```Pictures > Camera Roll``` directory
+1. Select the 10-15 image set for each a object type
+1. Enter a tag name - this is what your model will predict when it sees this object
+1. Repeat this until each set of images is uploaded into Custom Vision
+
+## 1.4 - Train and test your model
+1. Click the green 'Train' button in the top right corner. After your model has trained, you can see the rated performance
+1. Click 'Quick Test' next to the 'Train' button and upload an extra image of your item that **was not** included in the original 10-15 images
+
+## 1.5 - Export ONNX model
+1. Return to the Performance tab
+1. Click the 'Export' to start the download process
+1. Select ONNX as the model format and ONNX 1.2 as the format version
+1. Click 'Download' and rename to CustomVision.onnx in the ```Downloads``` folder
 
 # Step 2: Package the model into a C# .NET Application
 
