@@ -268,6 +268,18 @@ copy c:\Users\Admin\Downloads\CustomVision.onnx .\
 dotnet restore -r win-x64
 dotnet publish -r win-x64
 ```
+
+You will see the code built by dotnet:
+
+```
+Microsoft (R) Build Engine version 16.0.225-preview+g5ebeba52a1 for .NET Core
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Restore completed in 43.29 ms for C:\WindowsAiEdgeLabCV\WindowsAiEdgeLabCV.csproj.
+  WindowsAiEdgeLabCV -> C:\WindowsAiEdgeLabCV\bin\Debug\netcoreapp2.2\WindowsAiEdgeLabCV.dll
+  WindowsAiEdgeLabCV -> C:\WindowsAiEdgeLabCV\bin\Debug\netcoreapp2.2\publish\
+```
+
 2. Point the camera at one of your objects and test by running the following:
 
 ```powershell
@@ -275,6 +287,14 @@ dotnet run --model=CustomVision.onnx --device=LifeCam
 ```
 
 If the model is successful, you will see a prediction label show in the console.
+
+```
+4/24/2019 4:09:04 PM: Loading modelfile 'CustomVision.onnx' on the CPU...
+4/24/2019 4:09:04 PM: ...OK 594 ticks
+4/24/2019 4:09:05 PM: Running the model...
+4/24/2019 4:09:05 PM: ...OK 47 ticks
+4/24/2019 4:09:05 PM: Recognized {"results":[{"label":"Mug","confidence":1.0}],"metrics":{"evaltimeinms":47,"cycletimeinms":0}}
+```
 
 NOTE: This requires the LifeCam camera
 
@@ -349,6 +369,29 @@ $container = "ENTER YOUR CONTAINER NAME HERE"
 docker build . -t $container
 ```
 
+You will see the docker container built:
+
+```
+Sending build context to Docker daemon  90.54MB
+
+Step 1/5 : FROM mcr.microsoft.com/windows/iotcore:1809
+ ---> b292a83fe7c1
+Step 2/5 : ARG EXE_DIR=.
+ ---> Using cache
+ ---> cccdd52d4b4f
+Step 3/5 : WORKDIR /app
+ ---> Using cache
+ ---> 3e071099a8a8
+Step 4/5 : COPY $EXE_DIR/ ./
+ ---> 951c8a6e96bc
+Step 5/5 : CMD [ "WindowsAiEdgeLabCV.exe", "-mCustomVision.onnx", "-dLifeCam", "-ef" ]
+ ---> Running in ae981c4d8819
+Removing intermediate container ae981c4d8819
+ ---> fee066f14f2c
+Successfully built fee066f14f2c
+Successfully tagged aiedgelabcr.azurecr.io/customvision:1.0-x64-iotcore
+```
+
 ## 3.6 - Authenticate and push to Azure Container Registry
 
 1. Authenticate to the Azure Container Registry
@@ -356,6 +399,24 @@ docker build . -t $container
 ```powershell
 docker login "ENTER YOUR CONTAINER REGISTRY NAME/URL" -u "ENTER YOUR CONTAINER REGISTRY USERNAME" -p "ENTER YOUR CONTAINER REGISTRY PASSWORD"
 docker push $container
+```
+
+You will see the container pushed to your registry:
+
+
+```
+The push refers to repository [aiedgelabcr.azurecr.io/customvision]
+c1933e4141d1: Preparing
+ecdb3e0bf60d: Preparing
+b7f45a54f179: Preparing
+6bd44acbda1a: Preparing
+13e7d127b442: Preparing
+13e7d127b442: Skipped foreign layer
+c1933e4141d1: Pushed
+b7f45a54f179: Pushed
+6bd44acbda1a: Pushed
+ecdb3e0bf60d: Pushed
+1.0-x64-iotcore: digest: sha256:7ba0ac77a29d504ce19ed2ccb2a2c67addb24533e4e3b66476ca018566b58086 size: 1465
 ```
 
 # Step 4 - Create an Azure IoT Edge deployment to the target device
@@ -368,7 +429,7 @@ We will do this back on the development PC.
 
 Amongst the lab files, you will find a deployment json file named deployment.win-x64.json. Open this file in VS Code. We must fill in the details for the container image we just built above, along with our container registry credentials.
 
-Search for "{ACR_*}" and replace those values with the correct values for your container repository.
+Search for "{ACR_\*}" and replace those values with the correct values for your container repository.
 The ACR_IMAGE must exactly match what you pushed, e.g. aiedgelabcr.azurecr.io/customvision:1.0-x64-iotcore
 
 ```
