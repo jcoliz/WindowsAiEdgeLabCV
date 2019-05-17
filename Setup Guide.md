@@ -99,20 +99,6 @@ SUCCESS: Specified value was saved.
 1. Enter the connection string for the IoT Hub Owner, from the steps above
 1. You'll see the device show up which you created in the previous steps
 
-## Lab setup
-
-Once all the software is installed, the actual lab environment can be prepared.
-
-1. Connected via Ethernet to a network switch on the same subnet as the Target Machine.
-3. Create a directory on the desktop entitled "Windows IoT Edge Lab"
-2. Place a READ ONLY document in that directory containing the README instructions.
-2. Remove the "Setup" steps, including the "day of" setup from below. You'll be doing those, so the lab user doesn't need to.
-3. Add the Azure resources configuration information to the top of the document.
-3. Place a web shortcut to [Custom Vision Portal](https://www.customvision.ai/) on the desktop
-3. Place a web shortcut to [Time Series Insights explorer](https://insights.timeseries.azure.com/) on the desktop
-4. Place an app shortcut to VS Code on the desktop
-5. Git pull the lab files down to C:\Users\Admin\Desktop\WindowsIoT
-
 ## Author a deployment.json file
 
 Amongst the lab files, you will find a deployment json file named deployment.win-x64.json. Open this file in VS Code. We must fill in the details for the container image built in the lab, along with our container registry credentials.
@@ -200,8 +186,7 @@ This will show how many events are coming into Time Series Insights from the hub
 This can be done days before the lab.
 
 1. Affix a sticker to the bottom of the machine with the name of the machine.
-4. Verify that simulated temperature readings are coming through in Time Series Insights.
-2. Pull the iotcore container onto the IoT Core machine
+2. Pull the iotcore container onto the IoT Core machine. This is not a required step, however it will greatly speed up the lab if the iotcore container is already on the device.
 
 ```
 [192.168.1.116]: PS C:\data\modules\customvision> docker pull mcr.microsoft.com/windows/iotcore:1809
@@ -235,6 +220,19 @@ Device Name |
 Device IP Address |
 Device Administrator Password |
 
+# Prepare Lab PC
+
+Once all the software is installed, the actual lab environment can be prepared.
+
+1. Connected via Ethernet to a network switch on the same subnet as the Target Machine.
+1. The lab instructions expect the user logged in as Admin. Adjust as needed if logged in as another user.
+1. Create a directory on the desktop entitled "WindowsIoT"
+1. Place the README.md in that directory
+1. Place the credentials.txt in that directory
+1. Place a web shortcut to [Custom Vision Portal](https://www.customvision.ai/) on the desktop
+1. Place a web shortcut to [Time Series Insights explorer](https://insights.timeseries.azure.com/) on the desktop
+1. Place an app shortcut to VS Code on the desktop
+1. Git pull the lab files down to C:\Users\Admin\Desktop\WindowsIoT
 
 # Day of the Lab
 
@@ -242,9 +240,10 @@ Just before the lab begins, do the following:
 
 1. Turn on the IoT Core device
 1. Plug the camera into the development PC
-1. Log into the development PC
-7. Open a powershell window to C:\WindowsAiEdgeLabCV
-8. Open a powershell window and connect to the IoT Core device
+1. Log into the development PC. The lab instructions expect the user logged in as Admin. Adjust as needed if logged in as another user.
+7. Open a powershell window to C:\Users\Admin\Desktop\WindowsIoT\WindowsAiEdgeLabCV
+8. Open the IoT Core Dashboard
+8. Using the dashboard, open a powershell window and connect to the IoT Core device
 8. Check 'iotedge list' to ensure all modules are up including simulated temp sensor
 8. Docker login to the container registry using those credentials
 8. Set the $Container variable to match their Container Registry Login Server
