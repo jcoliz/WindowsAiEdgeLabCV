@@ -66,8 +66,6 @@ NOTE: Requires putting credentials into credentials.txt
 
 # Step 2 - Package the model into a C# .NET Application
 
-NOTE: Requires pulling the code as part of setup
-
 ## 2.1 - Find the code
 
 1. Open a Windows PowerShell Prompt **as Administrator**
