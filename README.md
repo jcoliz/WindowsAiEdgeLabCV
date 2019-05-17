@@ -200,7 +200,7 @@ Device Name |
 Device IP Address |
 Device Administrator Password |
 
-# Step 1: Train the Model
+# Step 1 - Train the Model
 
 ## 1.1 - Gathering Training data
 1. Plug the USB camera into your lab PC
@@ -221,6 +221,8 @@ Device Administrator Password |
 |Classification Types |Multiclass           |
 |Domains              |General **(compact)**|
 
+NOTE: Requires putting credentials into credentials.txt
+
 ## 1.3 - Importing Images into Custom Vision Service
 1. Click the 'Add Images' button and browse to the ```Pictures > Camera Roll``` directory
 1. Select the 10-15 image set for each a object type
@@ -237,123 +239,99 @@ Device Administrator Password |
 1. Select ONNX as the model format and ONNX 1.2 as the format version
 1. Click 'Download' and rename to CustomVision.onnx in the ```Downloads``` folder
 
-# Step 2: Package the model into a C# .NET Application
+# Step 2 - Package the model into a C# .NET Application
 
-## Get the code
+NOTE: Requires pulling the code as part of setup
 
-If you are running this lab in an environment where this has already been set up, the initial sample will already be present in the directory C:\WindowsAiEdgeLabCV. Otherwise, clone the code as follows:
+## 2.1 - Find the code
 
-1. Open a Windows Powershell Prompt.
-1. Change to a directory you'll use for the lab code. For example, C:\
-1. Clone the lab repo https://github.com/jcoliz/WindowsAiEdgeLabCV.git
-
-```
-PS C:\> git clone https://github.com/jcoliz/WindowsAiEdgeLabCV.git 
-Cloning into 'WindowsAiEdgeLabCV'...
-remote: Azure Repos
-remote: Found 78 objects to send. (51 ms)
-Unpacking objects: 100% (78/78), done.
-PS C:\> cd .\WindowsAiEdgeLabCV\
+1. Open a Windows PowerShell Prompt **as Administrator**
+1. Type the following to prepare your environment:
+```powershell
+cd c:\Users\Admin\Desktop\WindowsIoT\WindowsAiEdgeLabCV
+git clean -xdf
+git reset --hard
+git pull
 ```
 
-## Get your model file
+## 2.2 - Prepare your model file
+1. Copy your CustomVision.onnx to ```c:\Users\Admin\Desktop\WindowsIoT\WindowsAiEdgeLabCV``` either through Explorer, or with the following command: 
 
-Copy the CustomVision.onnx model file from your downloads directory where you exported it into the lab directory.
-
-## Build & Test the sample
-
-```
-PS C:\WindowsAiEdgeLabCV> dotnet publish -r win-x64
-Microsoft (R) Build Engine version 16.0.225-preview+g5ebeba52a1 for .NET Core
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-  Restore completed in 43.29 ms for C:\WindowsAiEdgeLabCV\WindowsAiEdgeLabCV.csproj.
-  WindowsAiEdgeLabCV -> C:\WindowsAiEdgeLabCV\bin\Debug\netcoreapp2.2\WindowsAiEdgeLabCV.dll
-  WindowsAiEdgeLabCV -> C:\WindowsAiEdgeLabCV\bin\Debug\netcoreapp2.2\publish\
+```powershell
+copy c:\Users\Admin\Downloads\CustomVision.onnx .\
 ```
 
-Run the sample to determine the name of the USB camera plugged in.
+## 2.3 - Build and test the code
+1. Run the following code:
 
+```powershell
+dotnet restore -r win-x64
+dotnet publish -r win-x64
 ```
-PS C:\WindowsAiEdgeLabCV> dotnet run --list
-Found 1 Cameras
-Microsoftr LifeCam HD-6000 for Notebooks
-```
+2. Point the camera at one of your objects and test by running the following:
 
-Point the camera at one of your objects, still connected to your development PC.
-
-Run the sample locally to classify the object. This will test that the app is running correctly locally. For the 'device' parameter use a unique substring of the camera that came up. Here we can see that a "Mug" has been recognized.
-
-```
-PS C:\WindowsAiEdgeLabCV> dotnet run --model=CustomVision.onnx --device=LifeCam
-4/24/2019 4:09:04 PM: Loading modelfile 'CustomVision.onnx' on the CPU...
-4/24/2019 4:09:04 PM: ...OK 594 ticks
-4/24/2019 4:09:05 PM: Running the model...
-4/24/2019 4:09:05 PM: ...OK 47 ticks
-4/24/2019 4:09:05 PM: Recognized {"results":[{"label":"Mug","confidence":1.0}],"metrics":{"evaltimeinms":47,"cycletimeinms":0}}
+```powershell
+dotnet run --model=CustomVision.onnx --device=LifeCam
 ```
 
-# Step 3: Build and push a container
+If the model is successful, you will see a prediction label show in the console.
 
-## Connect to our IoT Core device
+NOTE: This requires the LifeCam camera
 
-IoT Core container images must be built on an IoT Core device. 
+# Step 3 - Build and push a container
+
+## 3.1 - Connect to IoT Core device
+
+In this lab, we will build and push the container from the IoT Core device. 
 
 We will need a way to copy files to our device and a Windows PowerShell window from our development PC connected to that device.
 
-First, we will map the Q: drive to our device so we can access files. You'll need the Device IP Address, as well as the Device Administrator Password.
+First, we will map the Q: drive to our device so we can access files. 
 
-```
-PS C:\WindowsAiEdgeLabCV> $DeviceIPAddress = "192.168.1.102"
-PS C:\WindowsAiEdgeLabCV> net use q: \\$DeviceIPAddress\c$ $DeviceAdministratorPassword /USER:Administrator
-The command completed successfully.
+You'll need the Device IP Address. To get the IP Address open the "IoT Dashboard" from the desktop of your surface and select "My Devices".
+ 
+The name of your device is written on the underside of the IoT device case in white ink.
+
+Right click on your device and select "Copy IPv4 Address".
+
+Run the following commands in your PowerShell terminal:
+
+```powershell
+$ip = "ENTER YOUR DEVICE IP ADDRESS HERE"
+net use q: \\$ip\c$ "p@ssw0rd" /USER:Administrator
 ```
 
-Second, we'll connect a Windows PowerShell session to our target device. Open a new Windows PowerShell window, and connect to the device. When prompted enter the Device Administrator Password.
+NOTE: Requires IP address on the underside of the device!!
 
-```
-PS C:\WindowsAiEdgeLabCV> Enter-PSSession -ComputerName $DeviceIPAddress -Credential ~\Administrator
-```
 
-## Copy published files to target device
+## 3.2 - Copy binaries to IoT device
 
 We will copy the 'publish' folder over to our device
 
-```
-PS C:\WindowsAiEdgeLabCV> robocopy .\bin\Debug\netcoreapp2.2\win-x64\publish\ q:\data\modules\customvision
-
--------------------------------------------------------------------------------
-    ROBOCOPY     ::     Robust File Copy for Windows
--------------------------------------------------------------------------------
-
-    Started : Wednesday, April 24, 2019 4:31:37 PM
-    Source : D:\home\source\Repos\Windows-iotcore-samples\Samples\EdgeModules\SqueezeNetObjectDetection\cs\bin\Debug\netcoreapp2.2\win-x64\publish\
-        Dest : q:\data\modules\customvision\
-
-    Files : *.*
-
-    Options : *.* /DCOPY:DA /COPY:DAT /R:1000000 /W:30
-
-------------------------------------------------------------------------------
+```powershell
+cd "C:\Users\Admin\Desktop\WindowsIoT\WindowsAiEdgeLabCV"
+robocopy .\bin\Debug\netcoreapp2.2\win-x64\publish\ q:\data\modules\customvision
 ```
 
-## Test the sample on the target device
+## 3.3 - Test the binaries on IoT device
 
-Following the same approach as above, we will run the app on the target device to ensure we have the correct camera there, and it's working on that device.
+Next we will run the binaries on the target device.
 
-1. Connect the camera to the IoT Core device.
-1. In the Windows PowerShell window to the IoT Core device...
-1. Change to the "C:\data\modules\customvision" directory
-1. Do a test run as we did previously:
+1. Connect the camera to the IoT Core device
+1. Establish a remote PowerShell session on the IoT Core device by opening ``` Start Menu > IoT Dashboard```, right clicking on your device and clicking on 'Launch PowerShell'
+
+![remote powershell](./assets/iotdashboard1.png)
+
+To test the binaries, run the following commands in the remote PowerShell session:
+
+```powershell
+cd "C:\data\modules\customvision"
+.\WindowsAiEdgeLabCV.exe --model=CustomVision.onnx --device=LifeCam
+```
+
+If the test is successful, you should see objects recognized in the console.
 
 ```
-[192.168.1.102]: PS C:\Data\Users\Administrator\Documents> cd C:\data\modules\customvision
-
-[192.168.1.102]: PS C:\data\modules\customvision> .\WindowsAiEdgeLabCV.exe --list
-4/27/2019 8:30:52 AM: Available cameras:
-4/27/2019 8:30:53 AM: Microsoft® LifeCam HD-6000 for Notebooks
-
-[192.168.1.102]: PS C:\data\modules\customvision> .\WindowsAiEdgeLabCV.exe --model=CustomVision.onnx --device=LifeCam
 4/27/2019 8:31:31 AM: Loading modelfile 'CustomVision.onnx' on the CPU...
 4/27/2019 8:31:32 AM: ...OK 1516 ticks
 4/27/2019 8:31:36 AM: Running the model...
@@ -361,70 +339,27 @@ Following the same approach as above, we will run the app on the target device t
 4/27/2019 8:31:42 AM: Recognized {"results":[{"label":"Mug","confidence":1.0}],"metrics":{"evaltimeinms":1953,"cycletimeinms":0}}
 ```
 
-## Containerize the sample app
+## 3.5 - Containerize the sample app
 
-Build the container on the device. To make things easier in this lab, we will set the value of $Container to the address where we will push our container. This will be in the container repository we set up earlier. Find the "Container Registry Login Server" address from the steps above. For example, I am using "aiedgelabcr.azurecr.io" 
-to test the lab, so I will do as follows:
+**NOTE: The 'Container' related credentials (see above) will be useful in these steps.**
 
-```
-[192.168.1.102]: PS C:\data\modules\customvision> $Container = "aiedgelabcr.azurecr.io/customvision:1.0-x64-iotcore"
-```
-
-Still in the "C:\data\modules\customvision" directory, we will now build the container on the IoT Core device.
-Note that if we were building for an IoT Enterprise device, we could just do this on our development machine.
-
-```
-[192.168.1.102]: PS C:\data\modules\customvision> docker build . -t $Container
-Sending build context to Docker daemon  90.54MB
-
-Step 1/5 : FROM mcr.microsoft.com/windows/iotcore:1809
- ---> b292a83fe7c1
-Step 2/5 : ARG EXE_DIR=.
- ---> Using cache
- ---> cccdd52d4b4f
-Step 3/5 : WORKDIR /app
- ---> Using cache
- ---> 3e071099a8a8
-Step 4/5 : COPY $EXE_DIR/ ./
- ---> 951c8a6e96bc
-Step 5/5 : CMD [ "WindowsAiEdgeLabCV.exe", "-mCustomVision.onnx", "-dLifeCam", "-ef" ]
- ---> Running in ae981c4d8819
-Removing intermediate container ae981c4d8819
- ---> fee066f14f2c
-Successfully built fee066f14f2c
-Successfully tagged aiedgelabcr.azurecr.io/customvision:1.0-x64-iotcore
+```powershell
+#EXAMPLE: aiedgelabcr.azurecr.io/customvision:1.0-x64-iotcore
+$container = "ENTER YOUR CONTAINER NAME HERE"
+docker build . -t $container
 ```
 
-## Push the container
+## 3.6 - Authenticate and push to Azure Container Registry
 
-Now that we are sure the app is working correctly within the container, we will push it to our registry.
+1. Authenticate to the Azure Container Registry
 
-Before that, we will need to login to the container registry using the Container Registry Username and Container Registry Password obtained in previous steps.
-
-```
-PS C:\WindowsAiEdgeLabCV> docker login $ContainerRegistryLoginServer -u $ContainerRegistryUsername -p $ContainerRegistryPassword
-Login Succeeded
+```powershell
+docker login "ENTER YOUR CONTAINER REGISTRY NAME/URL" -u "ENTER YOUR CONTAINER REGISTRY USERNAME" -p "ENTER YOUR CONTAINER REGISTRY PASSWORD"
+docker push $container
 ```
 
-Then we'll push the container into our registry.
+# Step 4 - Create an Azure IoT Edge deployment to the target device
 
-```
-[192.168.1.102]: PS C:\data\modules\customvision> docker push $Container
-The push refers to repository [aiedgelabcr.azurecr.io/customvision]
-c1933e4141d1: Preparing
-ecdb3e0bf60d: Preparing
-b7f45a54f179: Preparing
-6bd44acbda1a: Preparing
-13e7d127b442: Preparing
-13e7d127b442: Skipped foreign layer
-c1933e4141d1: Pushed
-b7f45a54f179: Pushed
-6bd44acbda1a: Pushed
-ecdb3e0bf60d: Pushed
-1.0-x64-iotcore: digest: sha256:7ba0ac77a29d504ce19ed2ccb2a2c67addb24533e4e3b66476ca018566b58086 size: 1465
-```
-
-# Step 4: Create an Azure IoT Edge deployment to the target device
 
 ## Author a deployment.json file
 
@@ -461,38 +396,44 @@ The ACR_IMAGE must exactly match what you pushed, e.g. aiedgelabcr.azurecr.io/cu
           }
 ```
 
-## Deploy edge modules to device
+NOTE: This section is removed from aware group version.
 
-Refer to this guide: [Deploy Azure IoT Edge modules from Visual Studio Code](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-deploy-modules-vscode)
+## 4.1 - Deploy edge modules to device
 
-1. In VS Code, open the "Azure IoT Hub Devices" pane. 
-1. Locate the device there named according to the edge device name from when you created it in the hub. 
-1. Right-click on that device, then select "Create deployment for single device".
-1. Choose the deployment.json file you edited in the step above.
-1. Press OK
+Refer to this guide for more information: [Deploy Azure IoT Edge modules from Visual Studio Code](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-deploy-modules-vscode)
+
+1. In Visual Studio Code, open the 'Azure IoT Hub Devices' pane by selecting the Explorer sidebar in the top left corner (Ctrl + Shift + E) and then clicking on the 'Azure IoT Hub Devices' at the bottom of the sidebar when it opens
+1. If you see '-> Select IoT Hub', you will need to log in with your Azure Subscription, select the 'MS IoT Labs - Windows IoT' subscription and the IoT Hub
+1. Right-click on your device (for example, 'A09') and click 'Create Deployment for Single Device'
+1. Select ```C:\Users\Admin\Desktop\WindowsIoT\deployment.json```
 1. Look for "deployment succeeded" in the output window.
 
-```
-[Edge] Start deployment to device [ai-edge-lab-device]
-[Edge] Deployment succeeded.
+## 4.2 - Verify the deployment on IoT device
+
+The module deployment is instant, however changes to the device can take around 5-7 minutes to take effect. On the **target device** you can inspect the running modules with the following command in the remote PowerShell terminal:
+
+```powershell
+iotedge list
 ```
 
-## Verify the deployment on device
-
-Wait a few minutes for the deployment to go through. On the target device you can inspect the running modules. Success looks like this:
+You will see the Agent, Hub and our Custom Vision models deployed:
 
 ```
-[192.168.1.102]: PS C:\data\modules\customvision> iotedge list
 NAME             STATUS           DESCRIPTION      CONFIG
 customvision     running          Up 32 seconds    aiedgelabcr.azurecr.io/customvision:1.0-x64-iotcore
 edgeAgent        running          Up 2 minutes     mcr.microsoft.com/azureiotedge-agent:1.0
 edgeHub          running          Up 1 second      mcr.microsoft.com/azureiotedge-hub:1.0
 ```
 
-Once the modules are up, you can inspect that the "customvision" module is operating correctly:
+Once the modules have deployed to your device, you can inspect that the "customvision" module is operating correctly:
+
+```powershell
+iotedge logs customvision
+```
+
+You will see the familiar module logs we saw earlier when testing:
 
 ```
-[192.168.1.102]: PS C:\data\modules\customvision> iotedge logs customvision
 4/27/2019 9:04:59 AM: WindowsAiEdgeLabCV module starting.
 4/27/2019 9:04:59 AM: Initializing Azure IoT Edge...
 4/27/2019 9:06:11 AM: IoT Hub module client initialized.
@@ -504,12 +445,13 @@ Once the modules are up, you can inspect that the "customvision" module is opera
 4/27/2019 9:06:27 AM: Recognized {"results":[{"label":"Mug","confidence":1.0}],"metrics":{"evaltimeinms":1500,"cycletimeinms":0}}
 ```
 
-Finally, back on the development machine, we can monitor device to cloud (D2C) messages from VS Code to ensure the messages are going up.
+## 4.3 - Monitor Device to Cloud messages
 
-1. In VS Code, open the "Azure IoT Hub Devices" pane. 
-1. Locate the device there named "ai-edge-lab-device". 
-1. Right-click on that device, then select "Start monitoring D2C message".
-1. Look for inferencing results in the output window.
+1. In Visual Studio Code, open the 'Azure IoT Hub Devices' pane  
+1. Right-click your device and 'Start monitoring D2C messages'
+1. Test your model by holding up objects in front of the camera
+
+You will see inferencing results in the output window:
 
 ```
 [IoTHubMonitor] [9:07:44 AM] Message received from [ai-edge-lab-device/customvision]:
@@ -529,7 +471,7 @@ Finally, back on the development machine, we can monitor device to cloud (D2C) m
 
 Once you see this, you can be certain the inferencing is happening on the target device and flowing up to the Azure IoT Hub.
 
-# Step 5: View the results in Time Series Insights
+# Step 5 - View the results in Time Series Insights
 
 1. Open the [Time Series Insights explorer](https://insights.timeseries.azure.com/) in a browser tab.
 1. Choose the environment name you chose when creating the Time Series Insights resource in the portal.
@@ -544,3 +486,5 @@ Now you can change the object in front of the camera, and wait 10 seconds or so 
 You'll see the graph change to indicate more of the new object at the current time.
 
 ![Time Series Insights Explorer](assets/tsi.jpg)
+
+**Thanks for participating in the lab!**
