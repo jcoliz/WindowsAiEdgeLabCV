@@ -202,13 +202,13 @@ Device Administrator Password |
 
 # Step 1 - Train the Model
 
-## 1.1 - Gathering Training data
+## 1.1 - Gather Training Images
 1. Plug the USB camera into your lab PC
 1. Open the Windows Camera app from the Start Menu
 1. Take between 10-15 photos of each object you'd like to recognize with your model. **NOTE: More photos with different rotations and focal length should theoretically make for a better model!**
 1. Confirm your photos are in the ```Pictures > Camera Roll``` folder
 
-## 1.2 - Creating a Custom Vision Service Project
+## 1.2 - Create a Custom Vision Service Project
 1. Log into the [Custom Vision Service portal](https://www.customvision.ai/) using the provided Azure credentials (found in the credentials.txt file - see above)
 1. Choose the Directory associated with your Azure account
 1. Click 'New Project'
@@ -223,7 +223,7 @@ Device Administrator Password |
 
 NOTE: Requires putting credentials into credentials.txt
 
-## 1.3 - Importing Images into Custom Vision Service
+## 1.3 - Import Images into Custom Vision Service
 1. Click the 'Add Images' button and browse to the ```Pictures > Camera Roll``` directory
 1. Select the 10-15 image set for each a object type
 1. Enter a tag name - this is what your model will predict when it sees this object
@@ -359,7 +359,6 @@ docker push $container
 ```
 
 # Step 4 - Create an Azure IoT Edge deployment to the target device
-
 
 ## Author a deployment.json file
 
